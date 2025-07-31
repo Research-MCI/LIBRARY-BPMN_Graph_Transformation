@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BPMN"
+version = "0.1.0"
+description = "Flask microservice with MongoDB"
+authors = [{ name = "Your Name", email = "your@email.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+exclude = ".git,__pycache__,.venv,venv,build,dist"
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true

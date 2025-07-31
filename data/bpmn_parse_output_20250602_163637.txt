@@ -1,0 +1,2079 @@
+BPMN Parser Debug Output - 2025-06-02 16:36:37.265751
+============================================================
+Loading and debugging BPMN file...
+=== DEBUGGING ELEMENT PARSING ===
+Participants found: 3
+  - Main Process (id: Id_60dc331f-48e4-4b2e-ad6a-40f8ecb13bcf, processRef: Id_effca1fe-ecec-4cdc-ac40-bf4169edf6a6)
+  - HR DEPARTMENT (Recruitment Process) (id: Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef, processRef: Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e)
+  - Process 1 (id: Id_bd9e82a6-b458-411b-acd1-cdb82ae95ef7, processRef: Id_fdbdaad2-e31d-4443-8f61-35db8f2e96f0)
+
+Processes found: 3
+  - 'Main Process' (id: Id_effca1fe-ecec-4cdc-ac40-bf4169edf6a6)
+  - '' (id: Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e)
+  - '' (id: Id_fdbdaad2-e31d-4443-8f61-35db8f2e96f0)
+
+Actual lanes found: 1
+  - 'Candidate' (id: Id_132f150f-6a7a-45e2-a62a-b3814f8423aa, tag: lane)
+
+All elements containing 'lane': 6
+  - '' (id: Id_56197ce6-b334-4951-a960-bccf4c239b58, tag: laneSet, full: {http://www.omg.org/spec/BPMN/20100524/MODEL}laneSet)
+  - '' (id: Id_5c3de4ff-5874-4880-9c37-088d6b9b12db, tag: laneSet, full: {http://www.omg.org/spec/BPMN/20100524/MODEL}laneSet)
+  - 'Candidate' (id: Id_132f150f-6a7a-45e2-a62a-b3814f8423aa, tag: lane, full: {http://www.omg.org/spec/BPMN/20100524/MODEL}lane)
+  - '' (id: Id_71ef85d7-9159-4dc2-9564-6269c8080375, tag: childLaneSet, full: {http://www.omg.org/spec/BPMN/20100524/MODEL}childLaneSet)
+  - '' (id: Id_a5b0d278-6955-4709-8efc-c6b207ce52ae, tag: laneSet, full: {http://www.omg.org/spec/BPMN/20100524/MODEL}laneSet)
+  - '' (id: DiagramElement_8794212f-f9d8-460d-b769-b0d74279e0aa, tag: BPMNPlane, full: {http://www.omg.org/spec/BPMN/20100524/DI}BPMNPlane)
+
+==================================================
+
+=== RUNNING NORMAL PARSING ===
+DEBUG: Skipping container participant 'Main Process'
+=== Parsed BPMN Elements ===
+{
+  "elements": {
+    "activities": [
+      {
+        "id": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "name": "Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "name": "Review Offer",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "name": "Submit Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "name": "invisible task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "name": "Invisible Task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "name": "Invisible Task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "name": "Task 2",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "name": "Task 3",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "name": "Send Offer",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "name": "Assess Candidate\u00a0",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "name": "Review Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "name": "Plan Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "name": "Reject Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "name": "Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "name": "Hire Candidate",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      }
+    ],
+    "events": [
+      {
+        "id": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "name": "",
+        "type": "event",
+        "event_type": "intermediateCatchEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b",
+        "name": "Get Hired",
+        "type": "event",
+        "event_type": "endEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c",
+        "name": "",
+        "type": "event",
+        "event_type": "startEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_58e15208-9254-44e5-b473-80c7b6506404",
+        "name": "Rejected",
+        "type": "event",
+        "event_type": "endEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "name": "",
+        "type": "event",
+        "event_type": "startEvent",
+        "pool_id": null,
+        "lane_id": null
+      }
+    ],
+    "gateways": [
+      {
+        "id": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "name": "",
+        "gateway_type": "inclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "name": "",
+        "gateway_type": "inclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "name": "Satisfied?",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "name": "",
+        "gateway_type": "parallelGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      {
+        "id": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      }
+    ],
+    "flows": [
+      {
+        "id": "Id_6b61a36a-a7d7-4222-8cd4-cc3d8b5c67d4",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "source_name": "",
+        "target": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "target_name": "invisible task",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_69cef44e-f8cd-47a2-a567-33d03cb66621",
+        "name": "No",
+        "type": "sequence",
+        "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "source_name": "Satisfied?",
+        "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "target_name": "",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_7b226de5-bfb2-4dd2-96ec-e900b7b2521a",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "source_name": "",
+        "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "target_name": "Task 3",
+        "label": "OR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_7e708339-a864-4321-99e1-d5199384eafd",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "source_name": "",
+        "target": "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b",
+        "target_name": "Get Hired",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_267675f9-7d87-4511-9a36-cd0a031ddadb",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "source_name": "",
+        "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "target_name": "Interview",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_7a0b0126-4e35-4f48-b50c-798d6012e2f0",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "source_name": "Interview",
+        "target": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_00c72f38-abaa-4f19-a45a-4494872b0e86",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "source_name": "",
+        "target": "Id_58e15208-9254-44e5-b473-80c7b6506404",
+        "target_name": "Rejected",
+        "label": "OR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_349dca40-4b96-4531-a706-2e0738852cfa",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "source_name": "Review Offer",
+        "target": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "target_name": "Satisfied?",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_bdf94513-d90f-4a7a-8d95-d97b13387771",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "source_name": "",
+        "target": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "target_name": "Task 2",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_d747b2d7-b1c9-43be-8641-0c65eee84145",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "source_name": "",
+        "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "target_name": "Review Offer",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_d62d84c3-5ae3-4828-bd3d-856fa12e12f6",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c",
+        "source_name": "",
+        "target": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "target_name": "Submit Application",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_ea686431-a84f-4c10-97cf-f44f2e652b4c",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "source_name": "",
+        "target": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "target_name": "Invisible Task",
+        "label": "AND_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_84560c94-2e0b-46f5-b502-8411ebc2aab6",
+        "name": "Yes",
+        "type": "sequence",
+        "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "source_name": "Satisfied?",
+        "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "target_name": "",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_40695303-f6ba-4030-b7b0-ab7767b3a4e0",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "source_name": "invisible task",
+        "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_628ba23e-28a8-4e8a-8838-60626d7a7d54",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "source_name": "Submit Application",
+        "target": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "target_name": "",
+        "label": "AND_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_fa586b19-2534-4492-aca9-68de7de32042",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "source_name": "",
+        "target": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "target_name": "Invisible Task",
+        "label": "AND_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_bc7de8e5-5820-4e20-9f17-4a316b6a1523",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "source_name": "Invisible Task",
+        "target": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_43be6e01-4ce0-48ca-b7e8-465bc18f2dad",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "source_name": "Task 2",
+        "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_f05c5463-1ca0-4a74-ba8a-0fae6ad4c6b9",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "source_name": "Task 3",
+        "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_c03fe7f2-e878-4ad2-a69f-c4e8d4a2ef40",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "source_name": "",
+        "target": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "target_name": "Send Offer",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_fd0f94b8-6df8-4ac6-b471-ddc5c3911e05",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "source_name": "Assess Candidate\u00a0",
+        "target": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_6a2ceb15-c605-40c9-a1a0-22d03bf29a0c",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "source_name": "",
+        "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "target_name": "Reject Application",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_ea1905ff-e4f1-4a1b-86a0-83d32198053f",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "source_name": "Interview",
+        "target": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "target_name": "Assess Candidate\u00a0",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_bc5e630f-a7b7-4821-9891-9b51adfc6d7b",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "source_name": "Review Application",
+        "target": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_13955cb0-322a-4441-8250-9e33ff8b368b",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "source_name": "",
+        "target": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "target_name": "Review Application",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_d3c96d35-debd-40b1-83b7-9b481029a3f9",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "source_name": "",
+        "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "target_name": "Reject Application",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_46a71c14-6988-4803-9eec-2e96a4048feb",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "source_name": "",
+        "target": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "target_name": "Plan Interview",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_03e1aef6-ad94-4502-8c11-3d8889329116",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "source_name": "Plan Interview",
+        "target": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "target_name": "Interview",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_b48db919-7be2-422d-b6b3-96f14e5df73f",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "source_name": "Send Offer",
+        "target": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "target_name": "Hire Candidate",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_89f57830-a218-4fb6-bedc-503a1a56d9e9",
+        "name": "",
+        "type": "message",
+        "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "source_name": "Send Offer",
+        "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "target_name": "Review Offer",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_19abf00e-54f2-4704-8823-1b614bbd97f9",
+        "name": "",
+        "type": "message",
+        "source": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "source_name": "Invisible Task",
+        "target": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_e98b7066-9670-449b-bac2-22778a92b6b1",
+        "name": "",
+        "type": "message",
+        "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "source_name": "Plan Interview",
+        "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "target_name": "Interview",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_becb865d-f6b3-4a63-920b-fa2394189afc",
+        "name": "",
+        "type": "message",
+        "source": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "source_name": "Hire Candidate",
+        "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      {
+        "id": "Id_5e3babc9-c49a-4f7d-97bf-72ac707a7570",
+        "name": "",
+        "type": "message",
+        "source": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "source_name": "Reject Application",
+        "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "target_name": "Task 3",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      }
+    ],
+    "flows_by_type": {
+      "sequence_flows": [
+        {
+          "id": "Id_6b61a36a-a7d7-4222-8cd4-cc3d8b5c67d4",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+          "source_name": "",
+          "target": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+          "target_name": "invisible task",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_69cef44e-f8cd-47a2-a567-33d03cb66621",
+          "name": "No",
+          "type": "sequence",
+          "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+          "source_name": "Satisfied?",
+          "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+          "target_name": "",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_7b226de5-bfb2-4dd2-96ec-e900b7b2521a",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+          "source_name": "",
+          "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+          "target_name": "Task 3",
+          "label": "OR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_7e708339-a864-4321-99e1-d5199384eafd",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+          "source_name": "",
+          "target": "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b",
+          "target_name": "Get Hired",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_267675f9-7d87-4511-9a36-cd0a031ddadb",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+          "source_name": "",
+          "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+          "target_name": "Interview",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_7a0b0126-4e35-4f48-b50c-798d6012e2f0",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+          "source_name": "Interview",
+          "target": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+          "target_name": "",
+          "label": "XOR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_00c72f38-abaa-4f19-a45a-4494872b0e86",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+          "source_name": "",
+          "target": "Id_58e15208-9254-44e5-b473-80c7b6506404",
+          "target_name": "Rejected",
+          "label": "OR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_349dca40-4b96-4531-a706-2e0738852cfa",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+          "source_name": "Review Offer",
+          "target": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+          "target_name": "Satisfied?",
+          "label": "XOR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_bdf94513-d90f-4a7a-8d95-d97b13387771",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+          "source_name": "",
+          "target": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+          "target_name": "Task 2",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_d747b2d7-b1c9-43be-8641-0c65eee84145",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+          "source_name": "",
+          "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+          "target_name": "Review Offer",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_d62d84c3-5ae3-4828-bd3d-856fa12e12f6",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c",
+          "source_name": "",
+          "target": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+          "target_name": "Submit Application",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_ea686431-a84f-4c10-97cf-f44f2e652b4c",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+          "source_name": "",
+          "target": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+          "target_name": "Invisible Task",
+          "label": "AND_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_84560c94-2e0b-46f5-b502-8411ebc2aab6",
+          "name": "Yes",
+          "type": "sequence",
+          "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+          "source_name": "Satisfied?",
+          "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+          "target_name": "",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_40695303-f6ba-4030-b7b0-ab7767b3a4e0",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+          "source_name": "invisible task",
+          "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+          "target_name": "",
+          "label": "OR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_628ba23e-28a8-4e8a-8838-60626d7a7d54",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+          "source_name": "Submit Application",
+          "target": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+          "target_name": "",
+          "label": "AND_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_fa586b19-2534-4492-aca9-68de7de32042",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+          "source_name": "",
+          "target": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+          "target_name": "Invisible Task",
+          "label": "AND_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_bc7de8e5-5820-4e20-9f17-4a316b6a1523",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+          "source_name": "Invisible Task",
+          "target": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+          "target_name": "",
+          "label": "XOR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_43be6e01-4ce0-48ca-b7e8-465bc18f2dad",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+          "source_name": "Task 2",
+          "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+          "target_name": "",
+          "label": "OR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_f05c5463-1ca0-4a74-ba8a-0fae6ad4c6b9",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+          "source_name": "Task 3",
+          "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+          "target_name": "",
+          "label": "OR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_c03fe7f2-e878-4ad2-a69f-c4e8d4a2ef40",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+          "source_name": "",
+          "target": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+          "target_name": "Send Offer",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_fd0f94b8-6df8-4ac6-b471-ddc5c3911e05",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+          "source_name": "Assess Candidate\u00a0",
+          "target": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+          "target_name": "",
+          "label": "XOR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_6a2ceb15-c605-40c9-a1a0-22d03bf29a0c",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+          "source_name": "",
+          "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+          "target_name": "Reject Application",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_ea1905ff-e4f1-4a1b-86a0-83d32198053f",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+          "source_name": "Interview",
+          "target": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+          "target_name": "Assess Candidate\u00a0",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_bc5e630f-a7b7-4821-9891-9b51adfc6d7b",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+          "source_name": "Review Application",
+          "target": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+          "target_name": "",
+          "label": "XOR_JOIN",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_13955cb0-322a-4441-8250-9e33ff8b368b",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+          "source_name": "",
+          "target": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+          "target_name": "Review Application",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_d3c96d35-debd-40b1-83b7-9b481029a3f9",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+          "source_name": "",
+          "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+          "target_name": "Reject Application",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_46a71c14-6988-4803-9eec-2e96a4048feb",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+          "source_name": "",
+          "target": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+          "target_name": "Plan Interview",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_03e1aef6-ad94-4502-8c11-3d8889329116",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+          "source_name": "Plan Interview",
+          "target": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+          "target_name": "Interview",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_b48db919-7be2-422d-b6b3-96f14e5df73f",
+          "name": "",
+          "type": "sequence",
+          "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+          "source_name": "Send Offer",
+          "target": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+          "target_name": "Hire Candidate",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        }
+      ],
+      "message_flows": [
+        {
+          "id": "Id_89f57830-a218-4fb6-bedc-503a1a56d9e9",
+          "name": "",
+          "type": "message",
+          "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+          "source_name": "Send Offer",
+          "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+          "target_name": "Review Offer",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_19abf00e-54f2-4704-8823-1b614bbd97f9",
+          "name": "",
+          "type": "message",
+          "source": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+          "source_name": "Invisible Task",
+          "target": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+          "target_name": "",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_e98b7066-9670-449b-bac2-22778a92b6b1",
+          "name": "",
+          "type": "message",
+          "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+          "source_name": "Plan Interview",
+          "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+          "target_name": "Interview",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_becb865d-f6b3-4a63-920b-fa2394189afc",
+          "name": "",
+          "type": "message",
+          "source": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+          "source_name": "Hire Candidate",
+          "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+          "target_name": "",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        },
+        {
+          "id": "Id_5e3babc9-c49a-4f7d-97bf-72ac707a7570",
+          "name": "",
+          "type": "message",
+          "source": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+          "source_name": "Reject Application",
+          "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+          "target_name": "Task 3",
+          "label": "SEQUENCE_FLOW",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        }
+      ]
+    },
+    "pools": [
+      {
+        "id": "Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef",
+        "name": "HR DEPARTMENT (Recruitment Process)",
+        "type": "pool",
+        "process_ref": "Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e"
+      },
+      {
+        "id": "Id_bd9e82a6-b458-411b-acd1-cdb82ae95ef7",
+        "name": "Process 1",
+        "type": "pool",
+        "process_ref": "Id_fdbdaad2-e31d-4443-8f61-35db8f2e96f0"
+      }
+    ],
+    "lanes": [
+      {
+        "id": "Id_132f150f-6a7a-45e2-a62a-b3814f8423aa",
+        "name": "Candidate",
+        "type": "lane",
+        "pool_id": "Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef",
+        "process_id": "Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e"
+      }
+    ],
+    "elements_by_id": {
+      "Id_a2618248-64f7-410c-aca4-64f9a29116fa": {
+        "id": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "name": "Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1": {
+        "id": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "name": "Review Offer",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_33926d12-3930-4383-970d-1b5aed795c74": {
+        "id": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "name": "Submit Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c": {
+        "id": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "name": "invisible task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1": {
+        "id": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "name": "Invisible Task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c": {
+        "id": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "name": "Invisible Task",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd": {
+        "id": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "name": "Task 2",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0": {
+        "id": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "name": "Task 3",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6": {
+        "id": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "name": "Send Offer",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d": {
+        "id": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "name": "Assess Candidate\u00a0",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_69c49b62-a6c7-4b96-832b-77457ac67875": {
+        "id": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "name": "Review Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_3e229470-7899-42dc-b043-4ab073ec6ab4": {
+        "id": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "name": "Plan Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3": {
+        "id": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "name": "Reject Application",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_44396770-15a7-4f68-b3dd-42f6563da73c": {
+        "id": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "name": "Interview",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_ce257831-9069-4a42-8f51-f197fc7c41bd": {
+        "id": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "name": "Hire Candidate",
+        "type": "task",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5": {
+        "id": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "name": "",
+        "type": "event",
+        "event_type": "intermediateCatchEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b": {
+        "id": "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b",
+        "name": "Get Hired",
+        "type": "event",
+        "event_type": "endEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c": {
+        "id": "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c",
+        "name": "",
+        "type": "event",
+        "event_type": "startEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_58e15208-9254-44e5-b473-80c7b6506404": {
+        "id": "Id_58e15208-9254-44e5-b473-80c7b6506404",
+        "name": "Rejected",
+        "type": "event",
+        "event_type": "endEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7": {
+        "id": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "name": "",
+        "type": "event",
+        "event_type": "startEvent",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6": {
+        "id": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179": {
+        "id": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "name": "",
+        "gateway_type": "inclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_35558b92-e07f-4101-8135-9aba5c167d17": {
+        "id": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "name": "",
+        "gateway_type": "inclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc": {
+        "id": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "name": "Satisfied?",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342": {
+        "id": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_86120406-9f80-42e6-b750-59375d2c0118": {
+        "id": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "name": "",
+        "gateway_type": "parallelGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57": {
+        "id": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858": {
+        "id": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "name": "",
+        "gateway_type": "exclusiveGateway",
+        "pool_id": null,
+        "lane_id": null
+      },
+      "Id_6b61a36a-a7d7-4222-8cd4-cc3d8b5c67d4": {
+        "id": "Id_6b61a36a-a7d7-4222-8cd4-cc3d8b5c67d4",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "source_name": "",
+        "target": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "target_name": "invisible task",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_69cef44e-f8cd-47a2-a567-33d03cb66621": {
+        "id": "Id_69cef44e-f8cd-47a2-a567-33d03cb66621",
+        "name": "No",
+        "type": "sequence",
+        "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "source_name": "Satisfied?",
+        "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "target_name": "",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_7b226de5-bfb2-4dd2-96ec-e900b7b2521a": {
+        "id": "Id_7b226de5-bfb2-4dd2-96ec-e900b7b2521a",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "source_name": "",
+        "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "target_name": "Task 3",
+        "label": "OR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_7e708339-a864-4321-99e1-d5199384eafd": {
+        "id": "Id_7e708339-a864-4321-99e1-d5199384eafd",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "source_name": "",
+        "target": "Id_5211564a-b14d-44bc-b2a1-ae5d471c917b",
+        "target_name": "Get Hired",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_267675f9-7d87-4511-9a36-cd0a031ddadb": {
+        "id": "Id_267675f9-7d87-4511-9a36-cd0a031ddadb",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "source_name": "",
+        "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "target_name": "Interview",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_7a0b0126-4e35-4f48-b50c-798d6012e2f0": {
+        "id": "Id_7a0b0126-4e35-4f48-b50c-798d6012e2f0",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "source_name": "Interview",
+        "target": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_00c72f38-abaa-4f19-a45a-4494872b0e86": {
+        "id": "Id_00c72f38-abaa-4f19-a45a-4494872b0e86",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "source_name": "",
+        "target": "Id_58e15208-9254-44e5-b473-80c7b6506404",
+        "target_name": "Rejected",
+        "label": "OR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_349dca40-4b96-4531-a706-2e0738852cfa": {
+        "id": "Id_349dca40-4b96-4531-a706-2e0738852cfa",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "source_name": "Review Offer",
+        "target": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "target_name": "Satisfied?",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_bdf94513-d90f-4a7a-8d95-d97b13387771": {
+        "id": "Id_bdf94513-d90f-4a7a-8d95-d97b13387771",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "source_name": "",
+        "target": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "target_name": "Task 2",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_d747b2d7-b1c9-43be-8641-0c65eee84145": {
+        "id": "Id_d747b2d7-b1c9-43be-8641-0c65eee84145",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64257b52-f81b-48f4-bd6b-3f8b1e1718e6",
+        "source_name": "",
+        "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "target_name": "Review Offer",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_d62d84c3-5ae3-4828-bd3d-856fa12e12f6": {
+        "id": "Id_d62d84c3-5ae3-4828-bd3d-856fa12e12f6",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_42a006d5-1b60-4ea5-a1ae-a2927654b83c",
+        "source_name": "",
+        "target": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "target_name": "Submit Application",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_ea686431-a84f-4c10-97cf-f44f2e652b4c": {
+        "id": "Id_ea686431-a84f-4c10-97cf-f44f2e652b4c",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "source_name": "",
+        "target": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "target_name": "Invisible Task",
+        "label": "AND_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_84560c94-2e0b-46f5-b502-8411ebc2aab6": {
+        "id": "Id_84560c94-2e0b-46f5-b502-8411ebc2aab6",
+        "name": "Yes",
+        "type": "sequence",
+        "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+        "source_name": "Satisfied?",
+        "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "target_name": "",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_40695303-f6ba-4030-b7b0-ab7767b3a4e0": {
+        "id": "Id_40695303-f6ba-4030-b7b0-ab7767b3a4e0",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_eb94f0eb-602a-4e94-ba7c-3cf10bb6042c",
+        "source_name": "invisible task",
+        "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_628ba23e-28a8-4e8a-8838-60626d7a7d54": {
+        "id": "Id_628ba23e-28a8-4e8a-8838-60626d7a7d54",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_33926d12-3930-4383-970d-1b5aed795c74",
+        "source_name": "Submit Application",
+        "target": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "target_name": "",
+        "label": "AND_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_fa586b19-2534-4492-aca9-68de7de32042": {
+        "id": "Id_fa586b19-2534-4492-aca9-68de7de32042",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_86120406-9f80-42e6-b750-59375d2c0118",
+        "source_name": "",
+        "target": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "target_name": "Invisible Task",
+        "label": "AND_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_bc7de8e5-5820-4e20-9f17-4a316b6a1523": {
+        "id": "Id_bc7de8e5-5820-4e20-9f17-4a316b6a1523",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_22acd6ba-24a3-494e-8cdb-fd3fe674e93c",
+        "source_name": "Invisible Task",
+        "target": "Id_e98609ee-6509-4f9a-b7d3-5f561a7c5342",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_43be6e01-4ce0-48ca-b7e8-465bc18f2dad": {
+        "id": "Id_43be6e01-4ce0-48ca-b7e8-465bc18f2dad",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_904930dd-0b17-4bdf-96e1-29e413f9c4bd",
+        "source_name": "Task 2",
+        "target": "Id_35558b92-e07f-4101-8135-9aba5c167d17",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_f05c5463-1ca0-4a74-ba8a-0fae6ad4c6b9": {
+        "id": "Id_f05c5463-1ca0-4a74-ba8a-0fae6ad4c6b9",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "source_name": "Task 3",
+        "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+        "target_name": "",
+        "label": "OR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_c03fe7f2-e878-4ad2-a69f-c4e8d4a2ef40": {
+        "id": "Id_c03fe7f2-e878-4ad2-a69f-c4e8d4a2ef40",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "source_name": "",
+        "target": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "target_name": "Send Offer",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_fd0f94b8-6df8-4ac6-b471-ddc5c3911e05": {
+        "id": "Id_fd0f94b8-6df8-4ac6-b471-ddc5c3911e05",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "source_name": "Assess Candidate\u00a0",
+        "target": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_6a2ceb15-c605-40c9-a1a0-22d03bf29a0c": {
+        "id": "Id_6a2ceb15-c605-40c9-a1a0-22d03bf29a0c",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ff50e4d4-cc5f-4d6b-b7d4-be0f578af858",
+        "source_name": "",
+        "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "target_name": "Reject Application",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_ea1905ff-e4f1-4a1b-86a0-83d32198053f": {
+        "id": "Id_ea1905ff-e4f1-4a1b-86a0-83d32198053f",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "source_name": "Interview",
+        "target": "Id_98c1c18b-9bb1-4436-aae7-59edb9b6707d",
+        "target_name": "Assess Candidate\u00a0",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_bc5e630f-a7b7-4821-9891-9b51adfc6d7b": {
+        "id": "Id_bc5e630f-a7b7-4821-9891-9b51adfc6d7b",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "source_name": "Review Application",
+        "target": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "target_name": "",
+        "label": "XOR_JOIN",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_13955cb0-322a-4441-8250-9e33ff8b368b": {
+        "id": "Id_13955cb0-322a-4441-8250-9e33ff8b368b",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "source_name": "",
+        "target": "Id_69c49b62-a6c7-4b96-832b-77457ac67875",
+        "target_name": "Review Application",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_d3c96d35-debd-40b1-83b7-9b481029a3f9": {
+        "id": "Id_d3c96d35-debd-40b1-83b7-9b481029a3f9",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "source_name": "",
+        "target": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "target_name": "Reject Application",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_46a71c14-6988-4803-9eec-2e96a4048feb": {
+        "id": "Id_46a71c14-6988-4803-9eec-2e96a4048feb",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_29bec192-ee2d-465e-a5c9-b2f12e841a57",
+        "source_name": "",
+        "target": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "target_name": "Plan Interview",
+        "label": "XOR_SPLIT",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_03e1aef6-ad94-4502-8c11-3d8889329116": {
+        "id": "Id_03e1aef6-ad94-4502-8c11-3d8889329116",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "source_name": "Plan Interview",
+        "target": "Id_44396770-15a7-4f68-b3dd-42f6563da73c",
+        "target_name": "Interview",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_b48db919-7be2-422d-b6b3-96f14e5df73f": {
+        "id": "Id_b48db919-7be2-422d-b6b3-96f14e5df73f",
+        "name": "",
+        "type": "sequence",
+        "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "source_name": "Send Offer",
+        "target": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "target_name": "Hire Candidate",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_89f57830-a218-4fb6-bedc-503a1a56d9e9": {
+        "id": "Id_89f57830-a218-4fb6-bedc-503a1a56d9e9",
+        "name": "",
+        "type": "message",
+        "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "source_name": "Send Offer",
+        "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "target_name": "Review Offer",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_19abf00e-54f2-4704-8823-1b614bbd97f9": {
+        "id": "Id_19abf00e-54f2-4704-8823-1b614bbd97f9",
+        "name": "",
+        "type": "message",
+        "source": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "source_name": "Invisible Task",
+        "target": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_e98b7066-9670-449b-bac2-22778a92b6b1": {
+        "id": "Id_e98b7066-9670-449b-bac2-22778a92b6b1",
+        "name": "",
+        "type": "message",
+        "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "source_name": "Plan Interview",
+        "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "target_name": "Interview",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_becb865d-f6b3-4a63-920b-fa2394189afc": {
+        "id": "Id_becb865d-f6b3-4a63-920b-fa2394189afc",
+        "name": "",
+        "type": "message",
+        "source": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "source_name": "Hire Candidate",
+        "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_5e3babc9-c49a-4f7d-97bf-72ac707a7570": {
+        "id": "Id_5e3babc9-c49a-4f7d-97bf-72ac707a7570",
+        "name": "",
+        "type": "message",
+        "source": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "source_name": "Reject Application",
+        "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "target_name": "Task 3",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef": {
+        "id": "Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef",
+        "name": "HR DEPARTMENT (Recruitment Process)",
+        "type": "pool",
+        "process_ref": "Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e"
+      },
+      "Id_bd9e82a6-b458-411b-acd1-cdb82ae95ef7": {
+        "id": "Id_bd9e82a6-b458-411b-acd1-cdb82ae95ef7",
+        "name": "Process 1",
+        "type": "pool",
+        "process_ref": "Id_fdbdaad2-e31d-4443-8f61-35db8f2e96f0"
+      },
+      "Id_132f150f-6a7a-45e2-a62a-b3814f8423aa": {
+        "id": "Id_132f150f-6a7a-45e2-a62a-b3814f8423aa",
+        "name": "Candidate",
+        "type": "lane",
+        "pool_id": "Id_a655e15b-629a-4f0c-9d85-d4aeb10eabef",
+        "process_id": "Id_0db7cedb-77ea-4bf9-80d7-da1ece270c4e"
+      }
+    }
+  },
+  "statistics": {
+    "total_elements": 132,
+    "activities_count": 15,
+    "events_count": 5,
+    "gateways_count": 8,
+    "flows_count": 34,
+    "pools_count": 2,
+    "lanes_count": 2
+  }
+}
+
+=== Rule Violations ===
+{
+  "detecting_error": [
+    {
+      "type_error": "Activity tidak boleh memiliki 2 input atau 2 output tanpa gateway",
+      "element": {
+        "activity": {
+          "id": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+          "name": "Reject Application",
+          "type": "task",
+          "pool_id": null,
+          "lane_id": null
+        },
+        "input_count": 2,
+        "output_count": 0
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Gateway tidak boleh langsung terhubung ke Gateway",
+      "element": {
+        "flow": {
+          "id": "Id_69cef44e-f8cd-47a2-a567-33d03cb66621",
+          "name": "No",
+          "type": "sequence",
+          "source": "Id_71e34d63-4ff7-4871-83e0-440ad685a3dc",
+          "source_name": "Satisfied?",
+          "target": "Id_b2982bdd-32ed-4a88-923f-d8847a8e8179",
+          "target_name": "",
+          "label": "XOR_SPLIT",
+          "source_pool": null,
+          "source_lane": null,
+          "target_pool": null,
+          "target_lane": null
+        }
+      },
+      "severity": "warning"
+    },
+    {
+      "type_error": "Start event tidak boleh memiliki incoming flow",
+      "element": {
+        "event": {
+          "id": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+          "name": "",
+          "type": "event",
+          "event_type": "startEvent",
+          "pool_id": null,
+          "lane_id": null
+        }
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Tidak boleh Message flow terhubung dalam satu pool",
+      "element": {
+        "id": "Id_89f57830-a218-4fb6-bedc-503a1a56d9e9",
+        "name": "",
+        "type": "message",
+        "source": "Id_3b7dff15-7a74-475a-a9c4-5cc492bae9c6",
+        "source_name": "Send Offer",
+        "target": "Id_9998893f-f8ad-4a9c-9592-82131e68a8d1",
+        "target_name": "Review Offer",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Tidak boleh Message flow terhubung dalam satu pool",
+      "element": {
+        "id": "Id_19abf00e-54f2-4704-8823-1b614bbd97f9",
+        "name": "",
+        "type": "message",
+        "source": "Id_2b2a4a11-8d31-4d79-ad68-d27c622e2ad1",
+        "source_name": "Invisible Task",
+        "target": "Id_ed0cc7a7-8295-4931-aab0-4586ee61c0c7",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Tidak boleh Message flow terhubung dalam satu pool",
+      "element": {
+        "id": "Id_e98b7066-9670-449b-bac2-22778a92b6b1",
+        "name": "",
+        "type": "message",
+        "source": "Id_3e229470-7899-42dc-b043-4ab073ec6ab4",
+        "source_name": "Plan Interview",
+        "target": "Id_a2618248-64f7-410c-aca4-64f9a29116fa",
+        "target_name": "Interview",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Tidak boleh Message flow terhubung dalam satu pool",
+      "element": {
+        "id": "Id_becb865d-f6b3-4a63-920b-fa2394189afc",
+        "name": "",
+        "type": "message",
+        "source": "Id_ce257831-9069-4a42-8f51-f197fc7c41bd",
+        "source_name": "Hire Candidate",
+        "target": "Id_fe6a9960-f1d0-4e4e-92ac-7aa95c01f3f5",
+        "target_name": "",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "severity": "error"
+    },
+    {
+      "type_error": "Tidak boleh Message flow terhubung dalam satu pool",
+      "element": {
+        "id": "Id_5e3babc9-c49a-4f7d-97bf-72ac707a7570",
+        "name": "",
+        "type": "message",
+        "source": "Id_cf1d56d9-8fe1-4ae1-a84e-640c12eee0a3",
+        "source_name": "Reject Application",
+        "target": "Id_64fab4bd-fcc2-4f86-b4cb-5f9590c0b6d0",
+        "target_name": "Task 3",
+        "label": "SEQUENCE_FLOW",
+        "source_pool": null,
+        "source_lane": null,
+        "target_pool": null,
+        "target_lane": null
+      },
+      "severity": "error"
+    }
+  ]
+}
+
+
+Output saved to: bpmn_parse_output_20250602_163637.txt

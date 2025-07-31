@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Env files
+.env
+.env.*
+
+# Test, coverage, build
+htmlcov/
+.coverage
+.cache
+.mypy_cache/
+.pytest_cache/
+.pytest_tmp_*/
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp

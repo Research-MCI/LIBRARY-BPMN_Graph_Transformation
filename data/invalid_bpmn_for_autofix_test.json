@@ -1,0 +1,22 @@
+{
+  "elements": {
+    "activities": [
+      {
+        "id": "task1",
+        "name": "Send Invoice"
+      },
+      {}
+    ],
+    "events": [
+      {
+        "id": "startEvent1",
+        "type": "event"
+      }
+    ],
+    "gateways": [
+      {
+        "id": "gw1"
+      }
+    ]
+  }
+}
