@@ -2,22 +2,34 @@ stages:
   - build
   - publish
 
-build:
-  stage: build
-  script:
-    - echo "Building package..."
-    - pip install build
-    - python -m build
-  tags:
-    - build   # <--- pastikan runner dengan tag ini ada di server
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
-publish:
-  stage: publish
-  script:
-    - echo "Publishing to PyPI..."
-    - pip install twine
-    - python -m twine upload dist/* -u __token__ -p $PYPI_API_TOKEN
+# Build package
+build-package:
+  stage: build
+  image: python:3.11
   tags:
-    - build   # <--- atau tag runner yang sama
+    - docker   # sesuaikan dengan tag runner docker kamu
+  script:
+    - pip install --upgrade pip build
+    - python -m build
+  artifacts:
+    paths:
+      - dist/*.whl
+      - dist/*.tar.gz
+    expire_in: 1 hour
+
+# Publish to PyPI
+publish-pypi:
+  stage: publish
+  image: python:3.11
+  tags:
+    - docker   # pastikan pakai runner docker
+  script:
+    - pip install --upgrade pip twine
+    - python -m twine upload dist/* -u __token__ -p $PYPI_API_TOKEN
   only:
-    - main
+    - main  # atau branch/tag rilis
+  dependencies:
+    - build-package
