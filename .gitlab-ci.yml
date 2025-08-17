@@ -2,22 +2,27 @@ stages:
   - build
   - publish
 
-build:
+variables:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_NO_CACHE_DIR: "off"
+
+build-package:
   stage: build
+  image: python:3.11
   script:
-    - echo "Building package..."
+    - pip install --upgrade pip
     - pip install build
     - python -m build
-  tags:
-    - build   # <--- pastikan runner dengan tag ini ada di server
+  artifacts:
+    paths:
+      - dist/
 
-publish:
+publish-pypi:
   stage: publish
+  image: python:3.11
   script:
-    - echo "Publishing to PyPI..."
+    - pip install --upgrade pip
     - pip install twine
     - python -m twine upload dist/* -u __token__ -p $PYPI_API_TOKEN
-  tags:
-    - build   # <--- atau tag runner yang sama
   only:
-    - main
+    - main   # hanya jalan kalau commit/merge ke branch main
