@@ -3,26 +3,33 @@ stages:
   - publish
 
 variables:
-  PIP_DISABLE_PIP_VERSION_CHECK: "1"
-  PIP_NO_CACHE_DIR: "off"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
+# Build package
 build-package:
   stage: build
   image: python:3.11
+  tags:
+    - docker   # sesuaikan dengan tag runner docker kamu
   script:
-    - pip install --upgrade pip
-    - pip install build
+    - pip install --upgrade pip build
     - python -m build
   artifacts:
     paths:
-      - dist/
+      - dist/*.whl
+      - dist/*.tar.gz
+    expire_in: 1 hour
 
+# Publish to PyPI
 publish-pypi:
   stage: publish
   image: python:3.11
+  tags:
+    - docker   # pastikan pakai runner docker
   script:
-    - pip install --upgrade pip
-    - pip install twine
+    - pip install --upgrade pip twine
     - python -m twine upload dist/* -u __token__ -p $PYPI_API_TOKEN
   only:
-    - main   # hanya jalan kalau commit/merge ke branch main
+    - main  # atau branch/tag rilis
+  dependencies:
+    - build-package
