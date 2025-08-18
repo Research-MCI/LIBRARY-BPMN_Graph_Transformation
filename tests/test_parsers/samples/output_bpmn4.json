@@ -1,0 +1,1198 @@
+{
+  "metadata": {
+    "id": null,
+    "name": "Diagram4",
+    "version": "1.0",
+    "author": "",
+    "created": "2025-07-29T14:58:10.237408",
+    "modified": "2025-07-29T14:57:42.857143",
+    "source_format": "bpmn",
+    "source_tool": "bpmn.io Modeler",
+    "parser_version": ""
+  },
+  "flowElements": [
+    {
+      "id": "StartEvent_14txru0",
+      "name": "Start1",
+      "type": "startevent",
+      "subType": "NoneStart",
+      "incoming": [],
+      "outgoing": [
+        "Flow_0gbwt6r"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "222",
+        "y": "162",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Gateway_0vn0c67",
+      "name": "gateway1",
+      "type": "exclusivegateway",
+      "subType": "exclusivegateway",
+      "incoming": [
+        "Flow_0gbwt6r"
+      ],
+      "outgoing": [
+        "Flow_1hppp60",
+        "Flow_1fu1fof"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "315",
+        "y": "155",
+        "width": "50",
+        "height": "50"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_08oxfka",
+      "name": "Task1",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_1hppp60"
+      ],
+      "outgoing": [
+        "Flow_0lvbee3"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "430",
+        "y": "140",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_1asdayu",
+      "name": "Task2",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_1fu1fof"
+      ],
+      "outgoing": [
+        "Flow_1pddnvw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "430",
+        "y": "240",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0h3vxk6",
+      "name": "event1",
+      "type": "intermediatethrowevent",
+      "subType": "NoneIntermediate",
+      "incoming": [
+        "Flow_1pddnvw"
+      ],
+      "outgoing": [
+        "Flow_106fqsk"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "602",
+        "y": "262",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Gateway_1p3z68p",
+      "name": "gateway2",
+      "type": "exclusivegateway",
+      "subType": "exclusivegateway",
+      "incoming": [
+        "Flow_106fqsk",
+        "Flow_0lvbee3"
+      ],
+      "outgoing": [
+        "Flow_0cphu53"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "685",
+        "y": "175",
+        "width": "50",
+        "height": "50"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0me1aby",
+      "name": "end1",
+      "type": "endevent",
+      "subType": "NoneEnd",
+      "incoming": [
+        "Flow_0cphu53"
+      ],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "782",
+        "y": "182",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0gbwt6r",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "StartEvent_14txru0"
+      ],
+      "outgoing": [
+        "Gateway_0vn0c67"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "258",
+            "y": "180"
+          },
+          {
+            "x": "315",
+            "y": "180"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1hppp60",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Gateway_0vn0c67"
+      ],
+      "outgoing": [
+        "Activity_08oxfka"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "365",
+            "y": "180"
+          },
+          {
+            "x": "430",
+            "y": "180"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1fu1fof",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Gateway_0vn0c67"
+      ],
+      "outgoing": [
+        "Activity_1asdayu"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "340",
+            "y": "205"
+          },
+          {
+            "x": "340",
+            "y": "280"
+          },
+          {
+            "x": "430",
+            "y": "280"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0lvbee3",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_08oxfka"
+      ],
+      "outgoing": [
+        "Gateway_1p3z68p"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "530",
+            "y": "180"
+          },
+          {
+            "x": "608",
+            "y": "180"
+          },
+          {
+            "x": "608",
+            "y": "200"
+          },
+          {
+            "x": "685",
+            "y": "200"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1pddnvw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_1asdayu"
+      ],
+      "outgoing": [
+        "Event_0h3vxk6"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "530",
+            "y": "280"
+          },
+          {
+            "x": "602",
+            "y": "280"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_106fqsk",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_0h3vxk6"
+      ],
+      "outgoing": [
+        "Gateway_1p3z68p"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "638",
+            "y": "280"
+          },
+          {
+            "x": "710",
+            "y": "280"
+          },
+          {
+            "x": "710",
+            "y": "225"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0cphu53",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Gateway_1p3z68p"
+      ],
+      "outgoing": [
+        "Event_0me1aby"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "735",
+            "y": "200"
+          },
+          {
+            "x": "782",
+            "y": "200"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0ulj6xe",
+        "lane_id": null,
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0tdevx8",
+      "name": "Start2",
+      "type": "startevent",
+      "subType": "NoneStart",
+      "incoming": [],
+      "outgoing": [
+        "Flow_0eib4g5"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "232",
+        "y": "432",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_0aig58d",
+      "name": "Task3",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_0eib4g5"
+      ],
+      "outgoing": [
+        "Flow_1fef0ls"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "320",
+        "y": "410",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0oscb67",
+      "name": "event2",
+      "type": "intermediatethrowevent",
+      "subType": "NoneIntermediate",
+      "incoming": [
+        "Flow_1fef0ls"
+      ],
+      "outgoing": [
+        "Flow_01uw3cg"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "472",
+        "y": "432",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_09786nz",
+      "name": "end2",
+      "type": "endevent",
+      "subType": "NoneEnd",
+      "incoming": [
+        "Flow_01uw3cg"
+      ],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "562",
+        "y": "432",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0w15ywz",
+      "name": "Start3",
+      "type": "startevent",
+      "subType": "NoneStart",
+      "incoming": [],
+      "outgoing": [
+        "Flow_0lydndx"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "252",
+        "y": "642",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_1cfdnbl",
+      "name": "event3",
+      "type": "intermediatethrowevent",
+      "subType": "NoneIntermediate",
+      "incoming": [
+        "Flow_0lydndx"
+      ],
+      "outgoing": [
+        "Flow_1tl012b"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "342",
+        "y": "642",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_0tfuw0a",
+      "name": "Task4",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_1tl012b"
+      ],
+      "outgoing": [
+        "Flow_0lkzawk"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "440",
+        "y": "620",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Gateway_1gw92ba",
+      "name": "gateway3",
+      "type": "exclusivegateway",
+      "subType": "exclusivegateway",
+      "incoming": [
+        "Flow_0lkzawk"
+      ],
+      "outgoing": [
+        "Flow_1r9w7fg",
+        "Flow_0i7k9xx"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "605",
+        "y": "635",
+        "width": "50",
+        "height": "50"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_02wenif",
+      "name": "Task5",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_1r9w7fg"
+      ],
+      "outgoing": [
+        "Flow_1lxhwcf"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "720",
+        "y": "620",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Activity_0jakdqe",
+      "name": "Task6",
+      "type": "task",
+      "subType": "task",
+      "incoming": [
+        "Flow_0i7k9xx"
+      ],
+      "outgoing": [
+        "Flow_1fevfu9"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "720",
+        "y": "730",
+        "width": "100",
+        "height": "80"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_1chut05",
+      "name": "event4",
+      "type": "intermediatethrowevent",
+      "subType": "NoneIntermediate",
+      "incoming": [
+        "Flow_1lxhwcf"
+      ],
+      "outgoing": [
+        "Flow_1mo9fn1"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "892",
+        "y": "642",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0c2wx5w",
+      "name": "end3",
+      "type": "endevent",
+      "subType": "NoneEnd",
+      "incoming": [
+        "Flow_1mo9fn1"
+      ],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "1002",
+        "y": "642",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Event_0l27srw",
+      "name": "end4",
+      "type": "endevent",
+      "subType": "NoneEnd",
+      "incoming": [
+        "Flow_1fevfu9"
+      ],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "892",
+        "y": "752",
+        "width": "36",
+        "height": "36"
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0eib4g5",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_0tdevx8"
+      ],
+      "outgoing": [
+        "Activity_0aig58d"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "268",
+            "y": "450"
+          },
+          {
+            "x": "320",
+            "y": "450"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1fef0ls",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_0aig58d"
+      ],
+      "outgoing": [
+        "Event_0oscb67"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "420",
+            "y": "450"
+          },
+          {
+            "x": "472",
+            "y": "450"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_01uw3cg",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_0oscb67"
+      ],
+      "outgoing": [
+        "Event_09786nz"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "508",
+            "y": "450"
+          },
+          {
+            "x": "562",
+            "y": "450"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_0f0bnna",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0lydndx",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_0w15ywz"
+      ],
+      "outgoing": [
+        "Event_1cfdnbl"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "288",
+            "y": "660"
+          },
+          {
+            "x": "342",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1tl012b",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_1cfdnbl"
+      ],
+      "outgoing": [
+        "Activity_0tfuw0a"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "378",
+            "y": "660"
+          },
+          {
+            "x": "440",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0lkzawk",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_0tfuw0a"
+      ],
+      "outgoing": [
+        "Gateway_1gw92ba"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "540",
+            "y": "660"
+          },
+          {
+            "x": "605",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1r9w7fg",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Gateway_1gw92ba"
+      ],
+      "outgoing": [
+        "Activity_02wenif"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "655",
+            "y": "660"
+          },
+          {
+            "x": "720",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_0i7k9xx",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Gateway_1gw92ba"
+      ],
+      "outgoing": [
+        "Activity_0jakdqe"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "630",
+            "y": "685"
+          },
+          {
+            "x": "630",
+            "y": "770"
+          },
+          {
+            "x": "720",
+            "y": "770"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1lxhwcf",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_02wenif"
+      ],
+      "outgoing": [
+        "Event_1chut05"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "820",
+            "y": "660"
+          },
+          {
+            "x": "892",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1fevfu9",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Activity_0jakdqe"
+      ],
+      "outgoing": [
+        "Event_0l27srw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "820",
+            "y": "770"
+          },
+          {
+            "x": "892",
+            "y": "770"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    },
+    {
+      "id": "Flow_1mo9fn1",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "Event_1chut05"
+      ],
+      "outgoing": [
+        "Event_0c2wx5w"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "928",
+            "y": "660"
+          },
+          {
+            "x": "1002",
+            "y": "660"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "Process_0jieby5",
+        "lane_id": "Lane_04t1riv",
+        "label": null
+      }
+    }
+  ],
+  "messageFlows": [],
+  "pools": [
+    {
+      "id": "Participant_1j6urpf",
+      "name": "",
+      "processRef": "Process_0ulj6xe"
+    },
+    {
+      "id": "Participant_14bknbx",
+      "name": "",
+      "processRef": "Process_0jieby5"
+    }
+  ],
+  "lanes": [
+    {
+      "id": "Lane_0f0bnna",
+      "name": "",
+      "flowNodeRefs": [
+        "Event_0tdevx8",
+        "Activity_0aig58d",
+        "Event_0oscb67",
+        "Event_09786nz"
+      ]
+    },
+    {
+      "id": "Lane_04t1riv",
+      "name": "",
+      "flowNodeRefs": [
+        "Event_0w15ywz",
+        "Event_1cfdnbl",
+        "Activity_0tfuw0a",
+        "Gateway_1gw92ba",
+        "Activity_02wenif",
+        "Activity_0jakdqe",
+        "Event_1chut05",
+        "Event_0c2wx5w",
+        "Event_0l27srw"
+      ]
+    }
+  ]
+}

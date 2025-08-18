@@ -1,0 +1,316 @@
+[
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "1c38353f-edb2-4c8d-af9e-6b7a110762e1",
+        "type": "LongText",
+        "name": "text area di object",
+        "documentation": "ini text area di object",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "2c2a315e-fc3a-43be-9e06-1b7a07521498",
+        "type": "Radio",
+        "name": "single selection options radio",
+        "documentation": " ini single selection options radio",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "34aef016-2fc9-4740-bfe8-5a082e5ca0f9",
+        "type": "Date",
+        "name": "tanggal di process",
+        "documentation": "ini tanggal di process",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "35a7a2ee-8317-4d23-926a-fc5f7ead1d97",
+        "type": "Table",
+        "name": "table",
+        "documentation": "table",
+        "content": "",
+        "displayValue": "",
+        "tableValues": [
+          {
+            "id": "cc2eb08e-1a72-426c-8212-0f344f90527b",
+            "type": "Date",
+            "name": "Item 0",
+            "description": "0",
+            "options": []
+          },
+          {
+            "id": "fe5ef5ea-d8c2-41b2-b85e-c9c9703bd49b",
+            "type": "Number",
+            "name": "Item 1",
+            "description": "1",
+            "options": [
+              "0",
+              "10.00"
+            ]
+          },
+          {
+            "id": "783f28a6-2093-41ac-95d7-dd3f471d3153",
+            "type": "Number",
+            "name": "Item 2",
+            "description": "2",
+            "options": [
+              "0",
+              "10.00"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "3c564b57-ee6a-447b-8b71-c0ae90b959e2",
+        "type": "Number",
+        "name": "number di gateway",
+        "documentation": "ini number di gateway",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "4d982cee-435a-456f-9087-c917ce42fd15",
+        "type": "Text",
+        "name": "textbox di event",
+        "documentation": "ini textbox di event",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "4ecc90e6-573a-4812-9f0d-9f8dc682c061",
+        "type": "Check",
+        "name": "multiple selection options",
+        "documentation": "ini multiple selection options",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "55f4ae11-6eb9-4aa0-9ff0-0c5263926b02",
+        "type": "Number",
+        "name": "number di massegeflow",
+        "documentation": "ini number di massegeflow",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "77b5ff69-050c-4453-af28-40e875c545fb",
+        "type": "Date",
+        "name": "tanggal di flow",
+        "documentation": "ini tanggal di flow",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "845a33a8-748d-48b2-9d82-c78e6514ce29",
+        "type": "FileEmbedded",
+        "name": "embeded file",
+        "documentation": "ini embeded file",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "85a7e227-fda3-41b9-89e9-4cbb8e909d9c",
+        "type": "FileLinked",
+        "name": "linked file",
+        "documentation": "ini linked file",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "8aa310a5-9d60-446e-a40f-04792fe08cdf",
+        "type": "Text",
+        "name": "text box",
+        "documentation": "ini isi text box",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "9e5ff85a-6c34-406e-8d82-740d2ad0eab7",
+        "type": "Number",
+        "name": "association ke object",
+        "documentation": "ini association ke object",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "a583381a-452e-427f-ae40-2fae84f54192",
+        "type": "Link",
+        "name": "url di sub process",
+        "documentation": "ini url di sub process",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "a7a9344d-f698-4ebb-8824-77256af62b37",
+        "type": "Date",
+        "name": "tanggal",
+        "documentation": "ini tanggal",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "bc6374d9-fa58-4214-a5e3-b9007717d9c5",
+        "type": "Number",
+        "name": "number",
+        "documentation": "ini contoh number",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "bf58f1c1-4b42-4665-93c9-11873b49cfdd",
+        "type": "Date",
+        "name": "date di end cancel",
+        "documentation": "ini date di end cancel",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "c84a89b5-1c44-4783-b731-69340313d261",
+        "type": "Combo",
+        "name": "single selection options",
+        "documentation": "ini isi dari single selection options",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "dbf12e6e-b7b2-4674-95c7-36f77e0dce64",
+        "type": "Date",
+        "name": "date di db",
+        "documentation": "ini date di db",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "ddb5d674-cec1-45b6-8d66-c794d8ead0bc",
+        "type": "LongText",
+        "name": "text area",
+        "documentation": "ini isi text area",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "ec00ebfc-f8fd-4c66-9032-7136106f1c8b",
+        "type": "Link",
+        "name": "url",
+        "documentation": "url",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  },
+  {
+    "extensionElements": {
+      "extendedAttributeValues": {
+        "id": "f97fd71a-347f-47b7-9190-1542fec57944",
+        "type": "Image",
+        "name": "image",
+        "documentation": "ini image",
+        "content": "",
+        "displayValue": "",
+        "tableValues": []
+      }
+    }
+  }
+]

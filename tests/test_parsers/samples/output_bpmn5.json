@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "id": null,
+    "name": "MyDiagram1",
+    "version": "1.0",
+    "author": "",
+    "created": "2025-07-31T21:13:59.968646",
+    "modified": "2025-07-31T21:13:21.038886",
+    "source_format": "bpmn",
+    "source_tool": "Bonita Studio Modeler",
+    "parser_version": ""
+  },
+  "flowElements": [
+    {
+      "id": "_nB1C024UEfCx9t-Uaimltw",
+      "name": "Start1",
+      "type": "startevent",
+      "subType": "NoneStart",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "90.0",
+        "y": "68.0",
+        "width": "30.0",
+        "height": "30.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_nB1C124UEfCx9t-Uaimltw",
+      "name": "Step1",
+      "type": "usertask",
+      "subType": "usertask",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "190.0",
+        "y": "60.0",
+        "width": "100.0",
+        "height": "50.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_r3-5cG4UEfCx9t-Uaimltw",
+      "name": "Gateway1",
+      "type": "parallelgateway",
+      "subType": "parallelgateway",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "371.0",
+        "y": "62.0",
+        "width": "43.0",
+        "height": "43.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_scpswG4UEfCx9t-Uaimltw",
+      "name": "Step2",
+      "type": "servicetask",
+      "subType": "servicetask",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "509.0",
+        "y": "57.0",
+        "width": "100.0",
+        "height": "50.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_tswpwG4UEfCx9t-Uaimltw",
+      "name": "Message1",
+      "type": "intermediatethrowevent",
+      "subType": "NoneIntermediate",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "393.0",
+        "y": "160.0",
+        "width": "30.0",
+        "height": "30.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_u-5AAG4UEfCx9t-Uaimltw",
+      "name": "Step3",
+      "type": "servicetask",
+      "subType": "servicetask",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "514.0",
+        "y": "146.0",
+        "width": "100.0",
+        "height": "50.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_vRP7UG4UEfCx9t-Uaimltw",
+      "name": "Gateway2",
+      "type": "parallelgateway",
+      "subType": "parallelgateway",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "701.0",
+        "y": "70.0",
+        "width": "43.0",
+        "height": "43.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_wgpGoG4UEfCx9t-Uaimltw",
+      "name": "End1",
+      "type": "endevent",
+      "subType": "NoneEnd",
+      "incoming": [],
+      "outgoing": [],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "x": "831.0",
+        "y": "80.0",
+        "width": "30.0",
+        "height": "30.0"
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_nB1C6G4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_nB1C024UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_nB1C124UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "119.0",
+            "y": "84.0"
+          },
+          {
+            "x": "190.0",
+            "y": "84.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_r4DK4G4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_nB1C124UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_r3-5cG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "290.0",
+            "y": "84.0"
+          },
+          {
+            "x": "371.0",
+            "y": "84.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_scqT024UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_r3-5cG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_scpswG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "412.0",
+            "y": "82.0"
+          },
+          {
+            "x": "509.0",
+            "y": "82.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_uLvr0G4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_r3-5cG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_tswpwG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "410.0",
+            "y": "87.0"
+          },
+          {
+            "x": "410.0",
+            "y": "160.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_u-5nEW4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_tswpwG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_u-5AAG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "422.0",
+            "y": "173.0"
+          },
+          {
+            "x": "514.0",
+            "y": "173.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_vRQiZ24UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_u-5AAG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_vRP7UG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "614.0",
+            "y": "154.0"
+          },
+          {
+            "x": "643.0",
+            "y": "154.0"
+          },
+          {
+            "x": "643.0",
+            "y": "131.0"
+          },
+          {
+            "x": "708.0",
+            "y": "131.0"
+          },
+          {
+            "x": "708.0",
+            "y": "98.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_vt2-0G4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_scpswG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_vRP7UG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "609.0",
+            "y": "81.0"
+          },
+          {
+            "x": "711.0",
+            "y": "81.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    },
+    {
+      "id": "_w816cG4UEfCx9t-Uaimltw",
+      "name": "",
+      "type": "sequenceflow",
+      "subType": "sequenceflow",
+      "incoming": [
+        "_vRP7UG4UEfCx9t-Uaimltw"
+      ],
+      "outgoing": [
+        "_wgpGoG4UEfCx9t-Uaimltw"
+      ],
+      "documentation": "",
+      "extensionElements": {
+        "extendedAttributeValues": []
+      },
+      "position": {
+        "waypoints": [
+          {
+            "x": "740.0",
+            "y": "95.0"
+          },
+          {
+            "x": "831.0",
+            "y": "95.0"
+          }
+        ]
+      },
+      "properties": {
+        "pool_id": "_nB1C0W4UEfCx9t-Uaimltw",
+        "lane_id": "_nB1C0m4UEfCx9t-Uaimltw",
+        "label": null
+      }
+    }
+  ],
+  "messageFlows": [],
+  "pools": [
+    {
+      "id": "_g1KvcG4YEfCx9t-Uaimltw",
+      "name": "Pool",
+      "processRef": "_nB1C0W4UEfCx9t-Uaimltw"
+    },
+    {
+      "id": "_nB1C624UEfCx9t-Uaimltw",
+      "name": "Employee actor",
+      "processRef": null
+    }
+  ],
+  "lanes": [
+    {
+      "id": "_nB1C0m4UEfCx9t-Uaimltw",
+      "name": "Employee lane",
+      "flowNodeRefs": [
+        "_nB1C024UEfCx9t-Uaimltw",
+        "_nB1C124UEfCx9t-Uaimltw",
+        "_r3-5cG4UEfCx9t-Uaimltw",
+        "_scpswG4UEfCx9t-Uaimltw",
+        "_tswpwG4UEfCx9t-Uaimltw",
+        "_u-5AAG4UEfCx9t-Uaimltw",
+        "_vRP7UG4UEfCx9t-Uaimltw",
+        "_wgpGoG4UEfCx9t-Uaimltw"
+      ]
+    }
+  ]
+}

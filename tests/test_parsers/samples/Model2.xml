@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<SerializableExtendedAttributes xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtendedAttributeCollection>
+    <ExtendedAttribute Id="1c38353f-edb2-4c8d-af9e-6b7a110762e1" Type="LongText" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2901438+07:00" Visible="false" Color="">
+      <Name>text area di object</Name>
+      <Description>ini text area di object</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="DataObject" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="2c2a315e-fc3a-43be-9e06-1b7a07521498" Type="Radio" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2931447+07:00" Visible="false" Color="">
+      <Name>single selection options radio</Name>
+      <Description> ini single selection options radio</Description>
+      <Options>
+        <string>Option 0</string>
+        <string>Option 1</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="34aef016-2fc9-4740-bfe8-5a082e5ca0f9" Type="Date" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2941489+07:00" Visible="false" Color="">
+      <Name>tanggal di process</Name>
+      <Description>ini tanggal di process</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="AbstractTask" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="35a7a2ee-8317-4d23-926a-fc5f7ead1d97" Type="Table" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2941489+07:00" Visible="false" Color="">
+      <Name>table</Name>
+      <Description>table</Description>
+      <Options />
+      <TableColumns>
+        <ColumnAttribute Id="cc2eb08e-1a72-426c-8212-0f344f90527b" Type="Date" ExportAsTable="false" ModificationDate="0001-01-01T00:00:00+07:00" Visible="false">
+          <Name>Item 0</Name>
+          <Description>0</Description>
+          <Options />
+          <TableColumns />
+          <ElementTypes />
+        </ColumnAttribute>
+        <ColumnAttribute Id="fe5ef5ea-d8c2-41b2-b85e-c9c9703bd49b" Type="Number" ExportAsTable="false" ModificationDate="0001-01-01T00:00:00+07:00" Visible="false">
+          <Name>Item 1</Name>
+          <Description>1</Description>
+          <Options>
+            <string>0</string>
+            <string>10.00</string>
+          </Options>
+          <TableColumns />
+          <ElementTypes />
+        </ColumnAttribute>
+        <ColumnAttribute Id="783f28a6-2093-41ac-95d7-dd3f471d3153" Type="Number" ExportAsTable="false" ModificationDate="0001-01-01T00:00:00+07:00" Visible="false">
+          <Name>Item 2</Name>
+          <Description>2</Description>
+          <Options>
+            <string>0</string>
+            <string>10.00</string>
+          </Options>
+          <TableColumns />
+          <ElementTypes />
+        </ColumnAttribute>
+      </TableColumns>
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="3c564b57-ee6a-447b-8b71-c0ae90b959e2" Type="Number" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2951417+07:00" Visible="false" Color="">
+      <Name>number di gateway</Name>
+      <Description>ini number di gateway</Description>
+      <Options>
+        <string>0</string>
+        <string>10.00</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="ExclusiveGateway" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="4d982cee-435a-456f-9087-c917ce42fd15" Type="Text" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2961421+07:00" Visible="false" Color="">
+      <Name>textbox di event</Name>
+      <Description>ini textbox di event</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneIntermediate" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="4ecc90e6-573a-4812-9f0d-9f8dc682c061" Type="Check" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2961421+07:00" Visible="false" Color="">
+      <Name>multiple selection options</Name>
+      <Description>ini multiple selection options</Description>
+      <Options>
+        <string>Option 0</string>
+        <string>Option 1</string>
+        <string>Option 2</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="55f4ae11-6eb9-4aa0-9ff0-0c5263926b02" Type="Number" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2961421+07:00" Visible="false" Color="">
+      <Name>number di massegeflow</Name>
+      <Description>ini number di massegeflow</Description>
+      <Options>
+        <string>0</string>
+        <string>1.00</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="MessageFlow" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="77b5ff69-050c-4453-af28-40e875c545fb" Type="Date" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2961421+07:00" Visible="false" Color="">
+      <Name>tanggal di flow</Name>
+      <Description>ini tanggal di flow</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="SequenceFlow" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="845a33a8-748d-48b2-9d82-c78e6514ce29" Type="FileEmbedded" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2974485+07:00" Visible="false" Color="">
+      <Name>embeded file</Name>
+      <Description>ini embeded file</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="85a7e227-fda3-41b9-89e9-4cbb8e909d9c" Type="FileLinked" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2984571+07:00" Visible="false" Color="">
+      <Name>linked file</Name>
+      <Description>ini linked file</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="8aa310a5-9d60-446e-a40f-04792fe08cdf" Type="Text" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2984571+07:00" Visible="false" Color="">
+      <Name>text box</Name>
+      <Description>ini isi text box</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="9e5ff85a-6c34-406e-8d82-740d2ad0eab7" Type="Number" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.2995286+07:00" Visible="false" Color="">
+      <Name>association ke object</Name>
+      <Description>ini association ke object</Description>
+      <Options>
+        <string>0</string>
+        <string>10.00</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="Association" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="a583381a-452e-427f-ae40-2fae84f54192" Type="Link" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3005384+07:00" Visible="false" Color="">
+      <Name>url di sub process</Name>
+      <Description>ini url di sub process</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="CallActivity" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="a7a9344d-f698-4ebb-8824-77256af62b37" Type="Date" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3005384+07:00" Visible="false" Color="">
+      <Name>tanggal</Name>
+      <Description>ini tanggal</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="bc6374d9-fa58-4214-a5e3-b9007717d9c5" Type="Number" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3015381+07:00" Visible="false" Color="">
+      <Name>number</Name>
+      <Description>ini contoh number</Description>
+      <Options>
+        <string>0</string>
+        <string>100.00</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="bf58f1c1-4b42-4665-93c9-11873b49cfdd" Type="Date" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3025375+07:00" Visible="false" Color="">
+      <Name>date di end cancel</Name>
+      <Description>ini date di end cancel</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="CancelEnd" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="c84a89b5-1c44-4783-b731-69340313d261" Type="Combo" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3035431+07:00" Visible="false" Color="">
+      <Name>single selection options</Name>
+      <Description>ini isi dari single selection options</Description>
+      <Options>
+        <string>Option 0</string>
+        <string>Option 1</string>
+      </Options>
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="dbf12e6e-b7b2-4674-95c7-36f77e0dce64" Type="Date" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3035431+07:00" Visible="false" Color="">
+      <Name>date di db</Name>
+      <Description>ini date di db</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="DataStoreReference" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="ddb5d674-cec1-45b6-8d66-c794d8ead0bc" Type="LongText" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3045428+07:00" Visible="false" Color="">
+      <Name>text area</Name>
+      <Description>ini isi text area</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="ec00ebfc-f8fd-4c66-9032-7136106f1c8b" Type="Link" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3055441+07:00" Visible="false" Color="">
+      <Name>url</Name>
+      <Description>url</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+    <ExtendedAttribute Id="f97fd71a-347f-47b7-9190-1542fec57944" Type="Image" ExportAsTable="true" ModifiedBy="wadagraprana_asus" ModificationDate="2025-07-07T15:50:36.3065437+07:00" Visible="false" Color="">
+      <Name>image</Name>
+      <Description>ini image</Description>
+      <Options />
+      <TableColumns />
+      <ElementTypes>
+        <AttributeElementType Type="NoneStart" />
+      </ElementTypes>
+    </ExtendedAttribute>
+  </ExtendedAttributeCollection>
+  <ExtendedAttributeOrderList>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>34aef016-2fc9-4740-bfe8-5a082e5ca0f9</Id>
+      </ExtendedAttributes>
+      <ElementType Type="AbstractTask" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>a583381a-452e-427f-ae40-2fae84f54192</Id>
+      </ExtendedAttributes>
+      <ElementType Type="CallActivity" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>ddb5d674-cec1-45b6-8d66-c794d8ead0bc</Id>
+        <Id>8aa310a5-9d60-446e-a40f-04792fe08cdf</Id>
+        <Id>bc6374d9-fa58-4214-a5e3-b9007717d9c5</Id>
+        <Id>a7a9344d-f698-4ebb-8824-77256af62b37</Id>
+        <Id>f97fd71a-347f-47b7-9190-1542fec57944</Id>
+        <Id>c84a89b5-1c44-4783-b731-69340313d261</Id>
+        <Id>2c2a315e-fc3a-43be-9e06-1b7a07521498</Id>
+        <Id>4ecc90e6-573a-4812-9f0d-9f8dc682c061</Id>
+        <Id>845a33a8-748d-48b2-9d82-c78e6514ce29</Id>
+        <Id>85a7e227-fda3-41b9-89e9-4cbb8e909d9c</Id>
+        <Id>ec00ebfc-f8fd-4c66-9032-7136106f1c8b</Id>
+        <Id>35a7a2ee-8317-4d23-926a-fc5f7ead1d97</Id>
+      </ExtendedAttributes>
+      <ElementType Type="NoneStart" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>4d982cee-435a-456f-9087-c917ce42fd15</Id>
+      </ExtendedAttributes>
+      <ElementType Type="NoneIntermediate" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>bf58f1c1-4b42-4665-93c9-11873b49cfdd</Id>
+      </ExtendedAttributes>
+      <ElementType Type="CancelEnd" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>3c564b57-ee6a-447b-8b71-c0ae90b959e2</Id>
+      </ExtendedAttributes>
+      <ElementType Type="ExclusiveGateway" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>9e5ff85a-6c34-406e-8d82-740d2ad0eab7</Id>
+      </ExtendedAttributes>
+      <ElementType Type="Association" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>77b5ff69-050c-4453-af28-40e875c545fb</Id>
+      </ExtendedAttributes>
+      <ElementType Type="SequenceFlow" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>55f4ae11-6eb9-4aa0-9ff0-0c5263926b02</Id>
+      </ExtendedAttributes>
+      <ElementType Type="MessageFlow" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>1c38353f-edb2-4c8d-af9e-6b7a110762e1</Id>
+      </ExtendedAttributes>
+      <ElementType Type="DataObject" />
+    </ExtendedAttributeOrder>
+    <ExtendedAttributeOrder ModifiedBy="wadagraprana_asus">
+      <ExtendedAttributes>
+        <Id>dbf12e6e-b7b2-4674-95c7-36f77e0dce64</Id>
+      </ExtendedAttributes>
+      <ElementType Type="DataStoreReference" />
+    </ExtendedAttributeOrder>
+  </ExtendedAttributeOrderList>
+</SerializableExtendedAttributes>
