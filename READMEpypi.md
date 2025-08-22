@@ -7,9 +7,12 @@ A lightweight Python library to transform **BPMN JSON** into **Cypher queries** 
 - Schema & semantic validation for BPMN
 - Transformations for nodes, edges, pools, and lanes
 
-## 📦 Installation & Documentation
+## 📦 Installation
 ```bash
 pip install bpmn-graph-transformation
+```
 
-# Full Documentation & Source Code:
-https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation
+## 📖 Documentation
+<a href="https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation" target="_blank">
+Full Documentation & Source Code
+</a>
