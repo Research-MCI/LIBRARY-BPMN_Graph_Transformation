@@ -3,12 +3,15 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bpmn-neo4j-lib-test"
-version = "0.0.6-alpha"
-description = "Library untuk mengubah BPMN JSON menjadi Cypher queries untuk Neo4j"
+name = "bpmn-graph-transformation"
+version = "0.0.1"
+description = "Library for converting BPMN JSON to Cypher queries for Neo4j"
 readme = "README.md"
 authors = [
-  { name = "Izzat Aji Androfaza", email = "business.aji2022@gmail.com" }
+  {email = "business.aji2022@gmail.com"},
+  { email = "abiim@protonmail.com" },
+  { email = "6025241065@student.its.ac.id" },
+  { email = "lalualdo@gmail.com" }
 ]
 requires-python = ">=3.8"
 license = { text = "MIT" }
@@ -30,10 +33,10 @@ dev = [
   "flake8"
 ]
 
-#[project.urls]
-#Homepage = "https://github.com/yourusername/bpmn-neo4j-lib"
-#Repository = "https://github.com/yourusername/bpmn-neo4j-lib"
-#Issues = "https://github.com/yourusername/bpmn-neo4j-lib/issues"
+[project.urls]
+Documentation = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
+Source = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
+Homepage = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

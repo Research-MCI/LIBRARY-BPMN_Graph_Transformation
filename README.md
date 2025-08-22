@@ -21,7 +21,7 @@ bpmn-neo4j-lib/
 ## 📦 Installation
 
 ```bash
-pip install bpmn-neo4j-lib
+pip install bpmn-graph-transformation
 ```
 
 ### Requirements:
