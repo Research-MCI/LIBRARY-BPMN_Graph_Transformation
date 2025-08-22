@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bpmn-graph-transformation"
-version = "0.0.2"
+version = "0.0.3"
 description = "Library for converting BPMN JSON to Cypher queries for Neo4j"
 readme = "READMEpypi.md"
 authors = [
