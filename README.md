@@ -1,7 +1,7 @@
 # BPMN → Neo4j Graph Transformation Library
 
 A Python library for converting **BPMN JSON** into a **Neo4j graph database**.  
-It provides parsing, schema validation, semantic validation, transformation to Cypher, and execution in Neo4j.  
+It provides parsing, schema validation, semantic validation, and transformation to Cypher.  
 
 ---
 
@@ -11,7 +11,6 @@ bpmn-neo4j-lib/
  ├── parsers/            # JSON parsing
  ├── validators/         # Schema + semantic validation
  ├── transformers/       # GraphTransformer, node/edge builders
- ├── neo4j/              # Neo4j executor
  ├── utils/              # Logger
  └── exceptions/         # Custom error handling
 ```
@@ -88,72 +87,31 @@ cypher_lines = transformer.transform()
 
 ---
 
-#### 5. Connect to Neo4j
+#### 5. Save Cypher queries to file
 ```python
-from bpmn_neo4j.neo4j.neo4j_repositories import Neo4jExecutor
-
-executor = Neo4jExecutor(
-    uri="bolt://localhost:7687",
-    user="neo4j",
-    password="12345678"
-)
+output_file = "output_queries.cql"
+transformer.write_to_file(output_file)
+print(f"✅ Cypher queries saved to {output_file}")
 ```
-✅ Manages Neo4j connection.  
-Supports health checks, index creation, and batch execution of queries.
+✅ Stores all generated Cypher queries in a .cql file that can be run directly in Neo4j Browser.
 
 ---
 
-#### 6. Setup indexes
+#### 6. (Optional) Print queries in the terminal
 ```python
-executor.setup_indexes()
+for q in cypher_lines:
+    print(q)
 ```
-✅ Ensures Neo4j has indexes for efficient querying:
-- `(Activity {id})`  
-- `(Event {id})`  
-- `(Pool {id})`  
-- `(Lane {id})`  
-
----
-
-#### 7. Run batch Cypher queries
-```python
-executor.run_batch(
-    cypher_lines,
-    reset=True,          # clears database first
-    batch_size=20,       # queries per transaction
-    process_id=transformer.process_id
-)
-```
-✅ Executes generated Cypher queries in Neo4j:
-- Resets DB if `reset=True`.  
-- Uses batching for efficiency.  
-- Associates nodes with process_id.  
-
----
-
-#### 8. Get graph metrics
-```python
-print(executor.get_metrics(transformer.process_id))
-executor.close()
-```
-✅ Retrieves graph statistics:
-- Node counts (activities, events, start/end).  
-- Path count and average path length.  
-- Useful for analysis and validation.  
 
 ---
 
 ### 🔹 Output Example
-```json
-{
-  "total_nodes": 7,
-  "activities": 5,
-  "events": 2,
-  "start_events": 1,
-  "end_events": 1,
-  "paths": 1,
-  "avg_path_length": 7.0
-}
+```
+CREATE (:Activity {id: "task_1", name: "Approve Invoice", process_id: "1234"})
+CREATE (:Event {id: "start_1", type: "start", process_id: "1234"})
+CREATE (:Event {id: "end_1", type: "end", process_id: "1234"})
+CREATE (a1)-[:SEQUENCE_FLOW {id: "flow_1"}]->(a2)
+.......
 ```
 
 ---
@@ -164,40 +122,35 @@ from bpmn_neo4j.parsers.json_parser import load_json
 from bpmn_neo4j.validators.schema_validator import validate_schema
 from bpmn_neo4j.validators.bpmn_semantic_validator import validate_semantics
 from bpmn_neo4j.transformers.graph_transformer import GraphTransformer
-from bpmn_neo4j.neo4j.neo4j_repositories import Neo4jExecutor
 
-# 1. Load BPMN JSON
-data = load_json("examples/sample_bpmn.json")
+# 1. Load JSON (make sure you have a sample BPMN JSON file)
+data = load_json("output_bpmn (1).json")
 
-# 2. Schema validation
+# 2. Validate Schema (auto-fix common issues if enabled)
 validated = validate_schema(data, auto_fix=True)
 
-# 3. Semantic validation
+# 3. Validate BPMN Semantics
 validate_semantics(validated)
 
-# 4. Transform to Cypher
+# 4. Transform into Cypher queries
 transformer = GraphTransformer(json_data=validated)
 cypher_lines = transformer.transform()
 
-# 5. Execute in Neo4j
-executor = Neo4jExecutor("bolt://localhost:7687", "neo4j", "12345678")
-executor.setup_indexes()
-executor.run_batch(cypher_lines, reset=True, batch_size=20, process_id=transformer.process_id)
+# 5. Save the queries to a .cql file (so you can run them manually in Neo4j Browser)
+output_file = "output_queries.cql"
+transformer.write_to_file(output_file)
+print(f"✅ Cypher queries saved to {output_file}")
 
-# 6. Metrics
-print(executor.get_metrics(transformer.process_id))
-
-executor.close()
+# 6. (Optional) Print queries directly in the terminal
+print("\n=== Generated Cypher Queries ===")
+for q in cypher_lines:
+    print(q)
 ```
 
 ---
 
 ## 🧪 Running Tests
 ```bash
-pytest tests/
+python test.py
 ```
 
----
-
-## 📜 License
-MIT
