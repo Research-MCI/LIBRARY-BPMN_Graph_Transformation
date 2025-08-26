@@ -3,60 +3,40 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bpmn-neo4j-lib"
-version = "0.1.0"
-description = "Library untuk mengubah BPMN JSON menjadi Cypher queries untuk Neo4j"
+name = "bpmn-graph-transformation"
+version = "0.0.5"
+description = "Library for converting BPMN JSON to Cypher queries for Neo4j"
+readme = "READMEpypi.md"
 authors = [
-  { name = "Izzat Aji Androfaza", email = "business.aji2022@gmail.com" }
-  { name = "Lalu Aldo Wadagraprana", email = "lalualdo@gmail.com" }
-]
+  {email = "business.aji2022@gmail.com"},
+  { email = "abiim@protonmail.com" },
+  { email = "6025241065@student.its.ac.id" },
+  { email = "lalualdo@gmail.com" }
 ]
 requires-python = ">=3.8"
-license = "MIT"
-dynamic = ["dependencies"]
+license = { text = "MIT" }
 
-[project.optional-dependencies]
-dev = ["pytest", "black", "flake8"]
-
-
-# runtime dependencies
+# Dependency inti library (akan otomatis terinstall saat pip install)
 dependencies = [
-  "lxml>=5",
-  "xmltodict>=0.13",
+  "neo4j>=5.19.0",
+  "dirtyjson>=1.0.8",
+  "demjson3>=3.0.6",
   "jsonschema>=4.0.0",
-  "neo4j>=5",
+  "requests>=2.31.0",
+  "networkx>=3.3"
 ]
 
 [project.optional-dependencies]
 dev = [
-  "pytest>=8.0.0",
-  "pytest-cov>=5.0.0",
-  "flake8>=7.0.0",
-  "black>=24.0.0",
-  "isort>=5.0.0",
-  "mypy>=1.9.0",
-  "mongomock>=4.1.2",
-]
-server = [
-  "Flask==2.3.2",
-  "gunicorn>=22.0.0",
-  "uvicorn>=0.29.0",
-  "pymongo>=4.5.0",
-  "dnspython>=2.3.0",
-  "python-dotenv>=1.0.0",
+  "pytest",
+  "black",
+  "flake8"
 ]
 
-# Tambahkan CLI
-[project.scripts]
-bgt = "bgt.cli:main"
-
-# Entry points untuk plugin parsers
-[project.entry-points."bpmn_mp.parsers"]
-bpmn = "bpmn_mp.parsers.bpmn_parser.plugin:Plugin"
-xpdl = "bpmn_mp.parsers.xpdl_parser.plugin:Plugin"
-xml =  "bpmn_mp.parsers.xml_parser.plugin:Plugin"
-native = "bpmn_mp.parsers.native_parser.plugin:Plugin"
-vdx = "bpmn_mp.parsers.vdx_parser.plugin:Plugin"
+[project.urls]
+Documentation = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
+Source = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
+Homepage = "https://gitlab.iimlab.id/business-process/LIBRARY-BPMN_Graph_Transformation"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -64,12 +44,5 @@ package-dir = {"" = "src"}
 [tool.setuptools.packages.find]
 where = ["src"]
 
-
-# [project.urls]
-# Homepage = "https://github.com/yourusername/bpmn-neo4j-lib"
-# Repository = "https://github.com/yourusername/bpmn-neo4j-lib"
-# Issues = "https://github.com/yourusername/bpmn-neo4j-lib/issues"
-
-
-
-
+[tool.setuptools.package-data]
+"bpmn_neo4j.validators" = ["*.json"]
