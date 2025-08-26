@@ -63,7 +63,6 @@ def parse_extended_attribute_definitions(collab_elem: ET.Element) -> Dict[str, d
 
     return definitions
 
-
 def parse_extended_attribute_values(ext_elem: ET.Element, definitions: Dict[str, dict]) -> List[dict]:
     """
     Parse seluruh BizagiExtendedAttributeValue di dalam satu elemen BPMN.
