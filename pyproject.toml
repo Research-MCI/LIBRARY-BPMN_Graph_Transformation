@@ -23,12 +23,12 @@ dependencies = [
   "demjson3>=3.0.6",
   "jsonschema>=4.0.0",
   "requests>=2.31.0",
-  "networkx>=3.3"
-  "isort>=5.0.0"
-  "mypy>=1.9.0"
-  "mongomock>=4.1.2"
-  "pymongo==4.5.0"
-  "jsonschema>=4.0.0"
+  "networkx>=3.3",
+  "isort>=5.0.0",
+  "mypy>=1.9.0",
+  "mongomock>=4.1.2",
+  "pymongo==4.5.0",
+  "jsonschema>=4.0.0",
 ]
 
 [project.optional-dependencies]
