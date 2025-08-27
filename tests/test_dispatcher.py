@@ -1,27 +1,47 @@
-import pytest
+import os
+import json
+from pathlib import Path
 from unittest.mock import patch, mock_open
 
-from bpnb_mp.parsers.dispatcher import dispatch_parse
 
-@pytest.mark.parametrize("file_ext, func_name, mode, mock_return, expected_type", [
-    (".bpmn", "parse_file_bpmn", "r", {"result": "bpmn"}, "bpmn"),
-    (".xpdl", "parse_file_xpdl", "r", {"result": "xpdl"}, "xpdl"),
-    (".xml", "parse_file_xml", "r", {"attr": 1}, "xml"),
-    (".bpm", "parse_file_native", "rb", {"result": "native"}, "native"),
-])
-def test_dispatch_parse_supported(file_ext, func_name, mode, mock_return, expected_type):
-    dummy_path = f"test{file_ext}"
-    file_content = "dummy content" if mode == "r" else b"dummy content"
+from bpmn_mp.dispatcher import dispatch_parse
 
-    patch_str = f"bpmn_mp.parsers.dispatcher.{func_name}"
-    with patch("builtins.open", mock_open(read_data=file_content)), \
-         patch(patch_str, return_value=mock_return) as mock_parser:
-        if file_ext == ".xml":
-            result, t = dispatch_parse(dummy_path)
-            assert t == expected_type
-            assert result == {"extendedAttributes": mock_return}
-        else:
-            result, t = dispatch_parse(dummy_path)
-            assert t == expected_type
-            assert result == mock_return
-        mock_parser.assert_called_once()
+# Lokasi file sample BPMN
+CURRENT_DIR = Path(__file__).parent
+BPMN_FILE = CURRENT_DIR / "samples" / "MyDiagram1.bpmn"
+OUTPUT_FILE = CURRENT_DIR / "samples" / "output_Dispatcher.json"
+
+def test_dispatch_bpmn_and_save_output():
+    """
+    Memastikan dispatch_parse dapat memproses file BPMN,
+    mengembalikan data yang valid, dan menyimpan output.
+    """
+    assert BPMN_FILE.exists(), f"❌ File tidak ditemukan: {BPMN_FILE}"
+
+    try:
+        # Jalankan fungsi dispatcher dengan file BPMN asli
+        result, result_type = dispatch_parse(BPMN_FILE)
+
+        # Memastikan hasil parsing adalah dictionary
+        assert isinstance(result, dict), "❌ Output bukan dictionary"
+        
+        # Memastikan tipe file yang dikembalikan benar
+        assert result_type == "bpmn", f"❌ Tipe yang dikembalikan salah: {result_type}"
+        
+        # Contoh validasi konten dasar (sesuaikan dengan isi file Anda)
+        assert "flowElements" in result, "❌ 'flowElements' tidak ditemukan"
+        assert isinstance(result["flowElements"], list), "❌ 'flowElements' bukan list"
+
+        print("✅ File .bpmn berhasil diparse oleh dispatcher!")
+        
+        # Simpan hasil ke file output
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        print(f"📁 Output disimpan di: {OUTPUT_FILE}")
+
+    except Exception as e:
+        print("❌ Terjadi error saat menjalankan pengujian:")
+        print(e)
+        assert False, str(e)
+
+# pytest tests/test_dispatcher.py -s

@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bpmn-graph-transformation"
-version = "0.0.5"
+version = "0.1.0"
 description = "Library for converting BPMN JSON to Cypher queries for Neo4j"
 readme = "READMEpypi.md"
 authors = [
   {email = "business.aji2022@gmail.com"},
-  { email = "abiim@protonmail.com" },
+  { email = "labiim@protonmail.com" },
   { email = "6025241065@student.its.ac.id" },
   { email = "lalualdo@gmail.com" }
 ]
@@ -24,6 +24,11 @@ dependencies = [
   "jsonschema>=4.0.0",
   "requests>=2.31.0",
   "networkx>=3.3"
+  "isort>=5.0.0"
+  "mypy>=1.9.0"
+  "mongomock>=4.1.2"
+  "pymongo==4.5.0"
+  "jsonschema>=4.0.0"
 ]
 
 [project.optional-dependencies]
