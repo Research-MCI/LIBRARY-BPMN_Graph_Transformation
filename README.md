@@ -1,18 +1,23 @@
 # BPMN → Neo4j Graph Transformation Library
 
-A Python library for converting **BPMN JSON** into a **Neo4j graph database**.  
+A Python library for converting **BPMN Extension** into a **BPMN JSON** and nxt converting **BPMN JSON** into a **Neo4j graph database**.  
 It provides parsing, schema validation, semantic validation, and transformation to Cypher.  
 
 ---
 
 ## 📂 Project Structure
 ```
-bpmn-neo4j-lib/
- ├── parsers/            # JSON parsing
- ├── validators/         # Schema + semantic validation
- ├── transformers/       # GraphTransformer, node/edge builders
- ├── utils/              # Logger
- └── exceptions/         # Custom error handling
+project-root/
+├── src/
+    ├── bpmn-mp/
+    │   ├── parsers/            # Extension parsing
+    │   └── dispatcher/         # Dispatch Extension
+    └── bpmn-neo4j-lib/
+        ├── parsers/            # JSON parsing
+        ├── validators/         # Schema + semantic validation
+        ├── transformers/       # GraphTransformer, node/edge builders
+        ├── utils/              # Logger
+        └── exceptions/         # Custom error handling
 ```
 
 ---
@@ -37,7 +42,21 @@ You can use the library step by step, or orchestrate the whole process with your
 
 ### 🔹 Step-by-step Example
 
-#### 1. Load a JSON file
+#### 1. Load BPMN file
+```python
+import json
+from bpmn_mp.dispatcher import dispatch_parse
+
+def parse_and_save_bpmn(bpmn_path, output_path):
+    result, _ = dispatch_parse(bpmn_path)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    return result
+
+data = parse_and_save_bpmn("examples/MyDiagram1.bpmn", "examples/sample_bpmn.json")
+```
+
+#### 2. Load a JSON file
 ```python
 from bpmn_neo4j.parsers.json_parser import load_json
 
@@ -48,7 +67,7 @@ If the file is broken (invalid JSON), the parser attempts auto-repair and saves 
 
 ---
 
-#### 2. Validate schema
+#### 3. Validate schema
 ```python
 from bpmn_neo4j.validators.schema_validator import validate_schema
 
@@ -59,7 +78,7 @@ validated = validate_schema(data, auto_fix=True)
 
 ---
 
-#### 3. Validate semantics
+#### 4. Validate semantics
 ```python
 from bpmn_neo4j.validators.bpmn_semantic_validator import validate_semantics
 
@@ -73,7 +92,7 @@ validate_semantics(validated)
 
 ---
 
-#### 4. Transform JSON into Cypher
+#### 5. Transform JSON into Cypher
 ```python
 from bpmn_neo4j.transformers.graph_transformer import GraphTransformer
 
@@ -87,7 +106,7 @@ cypher_lines = transformer.transform()
 
 ---
 
-#### 5. Save Cypher queries to file
+#### 6. Save Cypher queries to file
 ```python
 output_file = "output_queries.cql"
 transformer.write_to_file(output_file)
@@ -97,7 +116,7 @@ print(f"✅ Cypher queries saved to {output_file}")
 
 ---
 
-#### 6. (Optional) Print queries in the terminal
+#### 7. (Optional) Print queries in the terminal
 ```python
 for q in cypher_lines:
     print(q)
@@ -118,30 +137,47 @@ CREATE (a1)-[:SEQUENCE_FLOW {id: "flow_1"}]->(a2)
 
 ### 🔹 Full Example
 ```python
+import json
+from bpmn_mp.dispatcher import dispatch_parse
 from bpmn_neo4j.parsers.json_parser import load_json
 from bpmn_neo4j.validators.schema_validator import validate_schema
 from bpmn_neo4j.validators.bpmn_semantic_validator import validate_semantics
 from bpmn_neo4j.transformers.graph_transformer import GraphTransformer
 
-# 1. Load JSON (make sure you have a sample BPMN JSON file)
+# 1. Parse BPMN and save as JSON
+def parse_and_save_bpmn(bpmn_path, output_path):
+    result, _ = dispatch_parse(bpmn_path)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    return result
+
+# Set your input/output file paths
+bpmn_file = "examples/MyDiagram1.bpmn"
+json_file = "examples/sample_bpmn.json"
+cql_file = "examples/output_queries.cql"
+
+# Parse BPMN and save to JSON
+parse_and_save_bpmn(bpmn_file, json_file)
+
+# 2. Load JSON (make sure you have a sample BPMN JSON file)
 data = load_json("output_bpmn (1).json")
 
-# 2. Validate Schema (auto-fix common issues if enabled)
+# 3. Validate Schema (auto-fix common issues if enabled)
 validated = validate_schema(data, auto_fix=True)
 
-# 3. Validate BPMN Semantics
+# 4. Validate BPMN Semantics
 validate_semantics(validated)
 
-# 4. Transform into Cypher queries
+# 5. Transform into Cypher queries
 transformer = GraphTransformer(json_data=validated)
 cypher_lines = transformer.transform()
 
-# 5. Save the queries to a .cql file (so you can run them manually in Neo4j Browser)
+# 6. Save the queries to a .cql file (so you can run them manually in Neo4j Browser)
 output_file = "output_queries.cql"
 transformer.write_to_file(output_file)
 print(f"✅ Cypher queries saved to {output_file}")
 
-# 6. (Optional) Print queries directly in the terminal
+# 7. (Optional) Print queries directly in the terminal
 print("\n=== Generated Cypher Queries ===")
 for q in cypher_lines:
     print(q)
