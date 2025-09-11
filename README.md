@@ -159,8 +159,8 @@ cql_file = "examples/output_queries.cql"
 # Parse BPMN and save to JSON
 parse_and_save_bpmn(bpmn_file, json_file)
 
-# 2. Load JSON (make sure you have a sample BPMN JSON file)
-data = load_json("output_bpmn (1).json")
+# 2. Load the generated JSON
+data = load_json(json_file)
 
 # 3. Validate Schema (auto-fix common issues if enabled)
 validated = validate_schema(data, auto_fix=True)
@@ -172,10 +172,9 @@ validate_semantics(validated)
 transformer = GraphTransformer(json_data=validated)
 cypher_lines = transformer.transform()
 
-# 6. Save the queries to a .cql file (so you can run them manually in Neo4j Browser)
-output_file = "output_queries.cql"
-transformer.write_to_file(output_file)
-print(f"✅ Cypher queries saved to {output_file}")
+# 6. Save the queries to a .cql file
+transformer.write_to_file(cql_file)
+print(f"✅ Cypher queries saved to {cql_file}")
 
 # 7. (Optional) Print queries directly in the terminal
 print("\n=== Generated Cypher Queries ===")
