@@ -48,6 +48,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["bpmn_neo4j*"]
 
 [tool.setuptools.package-data]
 "bpmn_neo4j.validators" = ["*.json"]
