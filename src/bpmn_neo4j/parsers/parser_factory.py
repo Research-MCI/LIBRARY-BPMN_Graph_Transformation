@@ -1,4 +1,4 @@
-from src.bpmn_neo4j.parsers.json_parser import load_json
+from bpmn_neo4j.parsers.json_parser import load_json
 
 class ParserFactory:
     @staticmethod

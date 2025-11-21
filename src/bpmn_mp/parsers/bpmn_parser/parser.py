@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Optional
 
-from src.bpmn_mp.parsers.bpmn_parser.helper import (
+from bpmn_mp.parsers.bpmn_parser.helper import (
     get_clean_tag,
     parse_xml_file,
     parse_element,

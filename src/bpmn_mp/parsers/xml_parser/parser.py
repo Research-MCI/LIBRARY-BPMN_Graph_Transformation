@@ -1,5 +1,5 @@
 from typing import List, Dict, Any
-from src.bpmn_mp.parsers.xml_parser.helper import parse_xml_file
+from bpmn_mp.parsers.xml_parser.helper import parse_xml_file
 
 def parse_definitions(content: str) -> List[Dict[str, Any]]:
     root = parse_xml_file(content)

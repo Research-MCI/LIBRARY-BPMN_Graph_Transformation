@@ -1,7 +1,7 @@
 from typing import Optional
 from pathlib import Path
 
-from src.bpmn_mp.parsers.vdx_parser.helper import (
+from bpmn_mp.parsers.vdx_parser.helper import (
     parse_xml_file,
     extract_metadata_vdx,
     extract_shapes_and_connects

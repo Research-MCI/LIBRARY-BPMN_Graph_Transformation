@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Optional
-from src.bpmn_mp.parsers.xpdl_parser.helper import (
+from bpmn_mp.parsers.xpdl_parser.helper import (
     parse_xml_file,
     get_element_details_xpdl,
     build_lane_and_pool_mappings_xpdl,
