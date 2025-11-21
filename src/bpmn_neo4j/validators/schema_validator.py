@@ -3,106 +3,108 @@ import jsonschema
 from jsonschema import validate
 import uuid
 import copy
-import os
 
-def validate_schema(data, schema_path=None, auto_fix=False):
-    # ✅ Hitung path absolut berdasarkan lokasi file ini
-    if schema_path is None:
-        schema_path = os.path.join(os.path.dirname(__file__), "bpmn_schema.json")
+def validate_schema(data, schema_path="validators/bpmn_schema.json", auto_fix=False):
+    """
+    Validasi struktur BPMN JSON dengan format baru (result.flowElements).
+    """
 
-    # Pastikan elemen 'elements' ada
-    if "elements" not in data:
-        print("❌ The 'elements' property is missing. This is required in BPMN structure.")
-        data["elements"] = {}
+    # Pastikan properti 'result' ada
+    if "result" not in data:
+        print("❌ The 'result' property is missing. This is required in BPMN structure.")
+        data["result"] = {}
 
-    # Pastikan minimal struktur utama ada
-    for key in ["activities", "events", "flows"]:
-        if key not in data["elements"]:
-            print(f"⚠️ Warning: The element '{key}' is missing. This does not comply with standard BPMN structure.")
-            data["elements"][key] = []
+    # Pastikan struktur utama di dalam 'result' ada
+    for key in ["flowElements", "messageFlows", "pools", "lanes"]:
+        if key not in data["result"]:
+            print(f"⚠️ Warning: The result key '{key}' is missing.")
+            data["result"][key] = []
 
-    # Deteksi & Perbaiki ID Duplikat
+    # 🔍 Ambil flowElements
+    flow_elements = data["result"].get("flowElements", [])
+
+    # Deteksi dan perbaiki ID duplikat atau hilang
     if auto_fix:
         fix_missing_ids(data)
         fix_duplicate_ids(data)
-
     else:
         duplicates = check_duplicate_ids(data)
         if duplicates:
             print(f"❌ Duplicate IDs found: {duplicates}")
 
-    # Deteksi siklus di flow
-    flows = data["elements"].get("flows", [])
-    if detect_cycle(flows):
+    # Deteksi siklus hanya pada flow bertipe "sequenceflow"
+    sequence_flows = [f for f in flow_elements if f.get("type", "").lower() == "sequenceflow"]
+    if detect_cycle(sequence_flows):
         print("⚠️ Warning: Circular reference detected in sequence flows.")
     else:
         print("✅ No circular dependencies in sequence flows.")
 
-    # Validasi terhadap schema JSON
-    with open(schema_path, 'r', encoding='utf-8') as f:
+    # Validasi JSON terhadap schema resmi
+    with open(schema_path, "r", encoding="utf-8") as f:
         schema = json.load(f)
 
     try:
         validate(instance=data, schema=schema)
-        print("✅ JSON structure is valid against the schema.")
+        print("✅ JSON structure is valid against the new BPMN schema.")
         return data
     except jsonschema.exceptions.ValidationError as err:
-        print("❌ Invalid structure:", err.message)
+        print(f"❌ Invalid structure: {err.message}")
         if auto_fix:
-            print("🛠️  Attempting to fix the JSON structure...")
+            print("🛠️ Attempting to fix the JSON structure automatically...")
             fixed_data = auto_fix_schema(data, schema)
             try:
                 validate(instance=fixed_data, schema=schema)
                 print("✅ JSON structure has been fixed successfully.")
                 return fixed_data
             except jsonschema.exceptions.ValidationError as err2:
-                print("❌ Structure fixing failed:", err2.message)
-                return fixed_data  # tetap kembalikan hasil perbaikan meskipun belum 100% valid
+                print(f"❌ Structure fixing failed: {err2.message}")
+                return fixed_data
         else:
             return data
 
-# 🔁 Periksa duplikat ID
+
+# 🔁 Cek ID duplikat di semua flowElements
 def check_duplicate_ids(data):
     id_set = set()
     duplicates = []
 
-    for category in ["activities", "events", "gateways"]:
-        for item in data["elements"].get(category, []):
-            iid = item.get("id")
-            if iid:
-                if iid in id_set:
-                    duplicates.append(iid)
-                id_set.add(iid)
+    for el in data["result"].get("flowElements", []):
+        iid = el.get("id")
+        if iid:
+            if iid in id_set:
+                duplicates.append(iid)
+            id_set.add(iid)
     return duplicates
 
-# ✅ Perbaiki ID Duplikat dengan Suffix
+
+# ✅ Perbaiki ID duplikat dengan suffix
 def fix_duplicate_ids(data):
-    print("🛠️  Checking and fixing duplicate IDs...")
+    print("🛠️ Checking and fixing duplicate IDs...")
     id_count = {}
-    for category in ["activities", "events", "gateways"]:
-        for item in data["elements"].get(category, []):
-            iid = item.get("id")
-            if not iid:
-                continue
-            if iid in id_count:
-                id_count[iid] += 1
-                new_id = f"{iid}_{id_count[iid]}"
-                print(f"⚠️ Duplicate ID '{iid}' found. Renaming to '{new_id}'.")
-                item["id"] = new_id
-            else:
-                id_count[iid] = 0
+    for el in data["result"].get("flowElements", []):
+        iid = el.get("id")
+        if not iid:
+            continue
+        if iid in id_count:
+            id_count[iid] += 1
+            new_id = f"{iid}_{id_count[iid]}"
+            print(f"⚠️ Duplicate ID '{iid}' found. Renaming to '{new_id}'.")
+            el["id"] = new_id
+        else:
+            id_count[iid] = 0
 
-# ✅ Beri ID Default Jika Tidak Ada
+
+# ✅ Beri ID default jika hilang
 def fix_missing_ids(data):
-    print("🛠️  Checking for missing IDs...")
-    for category in ["activities", "events", "gateways", "pools", "lanes", "artifacts"]:
-        for index, item in enumerate(data["elements"].get(category, [])):
-            if "id" not in item or not item["id"]:
-                default_id = f"{category[:-1]}_{uuid.uuid4().hex[:6]}"
-                print(f"⚠️ Missing ID detected in '{category}'. Assigning ID: {default_id}")
-                item["id"] = default_id
+    print("🛠️ Checking for missing IDs...")
+    for el in data["result"].get("flowElements", []):
+        if "id" not in el or not el["id"]:
+            new_id = f"element_{uuid.uuid4().hex[:6]}"
+            print(f"⚠️ Missing ID detected. Assigning ID: {new_id}")
+            el["id"] = new_id
 
-# 🧠 Auto-fix berdasarkan JSON schema
+
+# 🧠 Auto-fix berdasarkan JSON schema (rekursif)
 def auto_fix_schema(data, schema):
     def fix_object(obj, schema_obj, path="root"):
         if not isinstance(obj, dict):
@@ -132,7 +134,6 @@ def auto_fix_schema(data, schema):
                             fix_object(item, item_schema, f"{path}.{key}[{idx}]")
 
     def generate_default_value(key, prop_schema, path=""):
-        # Aturan penetapan default berbasis schema
         if prop_schema.get("enum"):
             return prop_schema["enum"][0]
         if prop_schema.get("type") == "string":
@@ -143,13 +144,14 @@ def auto_fix_schema(data, schema):
             return []
         if prop_schema.get("type") == "object":
             return {}
-        return None  # fallback
+        return None
 
     fixed_data = copy.deepcopy(data)
     fix_object(fixed_data, schema, path="root")
     return fixed_data
 
-# 🔁 Deteksi siklus pada flow
+
+# 🔁 Deteksi siklus hanya untuk sequenceFlow
 def detect_cycle(flows):
     from collections import defaultdict, deque
 

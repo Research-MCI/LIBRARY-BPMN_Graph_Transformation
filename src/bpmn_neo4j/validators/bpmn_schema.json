@@ -1,96 +1,49 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BPMN Schema",
   "type": "object",
-  "required": ["elements"],
-
+  "required": ["result"],
   "properties": {
-    "elements": {
+    "result": {
       "type": "object",
-      "required": ["activities", "events", "flows"],
+      "required": ["flowElements"],
       "properties": {
-        "activities": {
+        "flowElements": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "name", "type"],
+            "required": ["id", "type"],
             "properties": {
               "id": { "type": "string" },
+              "type": { "type": "string" },
               "name": { "type": "string" },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "task",
-                  "userTask",
-                  "serviceTask",
-                  "manualTask",
-                  "scriptTask",
-                  "sendTask",
-                  "receiveTask",
-                  "businessRuleTask",
-                  "callActivity"
-                ]
+              "source": { "type": ["string", "null"] },
+              "target": { "type": ["string", "null"] },
+              "subType": { "type": ["string", "null"] },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "pool_id": { "type": ["string", "null"] },
+                  "lane_id": { "type": ["string", "null"] }
+                }
               }
             }
           }
         },
-        "events": {
+        "messageFlows": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "type", "event_type"],
             "properties": {
               "id": { "type": "string" },
-              "name": { "type": "string" },
-              "type": { "type": "string", "enum": ["event"] },
-              "event_type": {
-                "type": "string",
-                "enum": [
-                  "startEvent",
-                  "endEvent",
-                  "intermediateCatchEvent",
-                  "intermediateThrowEvent",
-                  "boundaryEvent"
-                ]
-              }
-            }
-          }
-        },
-        "flows": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["id", "type", "source", "target"],
-            "properties": {
-              "id": { "type": "string" },
-              "type": {
-                "type": "string",
-                "enum": ["sequence", "message", "association", "data"]
-              },
               "source": { "type": "string" },
-              "target": { "type": "string" }
+              "target": { "type": "string" },
+              "name": { "type": "string" }
             }
           }
         },
-        "gateways": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["id", "gateway_type"],
-            "properties": {
-              "id": { "type": "string" },
-              "gateway_type": {
-                "type": "string",
-                "enum": [
-                  "exclusiveGateway",
-                  "inclusiveGateway",
-                  "parallelGateway",
-                  "eventBasedGateway",
-                  "complexGateway"
-                ]
-              }
-            }
-          }
-        }
+        "pools": { "type": "array" },
+        "lanes": { "type": "array" }
       }
     }
   }
