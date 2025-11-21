@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from typing import Optional
 from pathlib import Path
-from src.bpmn_mp.parsers.native_parser.helper import (
+from bpmn_mp.parsers.native_parser.helper import (
     extract_zip_bytes,
     load_extended_attributes,
     extract_metadata_bpm,

@@ -1,10 +1,10 @@
 import os
 from typing import Dict, Any, Tuple
 
-from src.bpmn_mp.parsers.bpmn_parser.parser import parse_file as parse_file_bpmn
-from src.bpmn_mp.parsers.xpdl_parser.parser import parse_file as parse_file_xpdl
-from src.bpmn_mp.parsers.xml_parser.parser import parse_definitions as parse_file_xml
-from src.bpmn_mp.parsers.native_parser.parser import parse_file as parse_file_native
+from bpmn_mp.parsers.bpmn_parser.parser import parse_file as parse_file_bpmn
+from bpmn_mp.parsers.xpdl_parser.parser import parse_file as parse_file_xpdl
+from bpmn_mp.parsers.xml_parser.parser import parse_definitions as parse_file_xml
+from bpmn_mp.parsers.native_parser.parser import parse_file as parse_file_native
 
 def dispatch_parse(file_path: str) -> Tuple[Dict[str, Any], str]:
     file_ext = os.path.splitext(file_path)[-1].lower()
