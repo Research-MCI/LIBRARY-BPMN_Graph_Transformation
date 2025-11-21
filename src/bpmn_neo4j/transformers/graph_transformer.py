@@ -4,15 +4,18 @@ import uuid
 from bpmn_neo4j.transformers.nodes import generate_nodes
 from bpmn_neo4j.transformers.edges import generate_edges
 from bpmn_neo4j.transformers.pool_lanes import generate_pools_lanes
-from bpmn_neo4j.transformers.transform_input_elements import normalize_flow_elements
+from bpmn_neo4j.transformers.transform_input_elements import normalize_flow_elements, normalize_json_structure
 
 
 class GraphTransformer:
     def __init__(self, json_data):
-        self.data = json_data
-        self.process_id = str(uuid.uuid4())
         self.logger = logging.getLogger(__name__)
         logging.basicConfig(level=logging.INFO)
+
+        # ✅ Normalisasi struktur JSON (angkat flowElements dari result jika perlu)
+        json_data = normalize_json_structure(json_data)
+        self.data = json_data
+        self.process_id = str(uuid.uuid4())
 
         # 🔍 Deteksi apakah JSON sudah terstruktur atau mentah
         if all(k in json_data for k in ["activities", "events", "gateways", "flows"]):
