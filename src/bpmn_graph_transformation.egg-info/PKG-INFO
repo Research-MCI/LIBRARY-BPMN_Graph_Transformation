@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: bpmn-graph-transformation
-Version: 0.1.9
+Version: 0.1.10
 Summary: Library for converting BPMN JSON to Cypher queries for Neo4j
 Author-email: business.aji2022@gmail.com, labiim@protonmail.com, 6025241065@student.its.ac.id, lalualdo@gmail.com
 License: MIT
