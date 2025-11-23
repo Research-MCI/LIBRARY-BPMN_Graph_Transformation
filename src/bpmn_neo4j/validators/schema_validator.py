@@ -51,8 +51,7 @@ def validate_schema(data, schema_path=None, auto_fix=False):
         print("✅ No circular dependencies in sequence flows.")
 
     # Validasi JSON terhadap schema resmi
-    with open(schema_path, "r", encoding="utf-8") as f:
-        schema = json.load(f)
+
 
     try:
         validate(instance=data, schema=schema)
