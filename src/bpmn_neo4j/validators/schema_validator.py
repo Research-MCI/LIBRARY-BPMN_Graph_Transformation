@@ -22,14 +22,39 @@ def validate_schema(data, schema_path=None, auto_fix=False):
 
     # Pastikan properti 'result' ada
     if "result" not in data:
-        print("❌ The 'result' property is missing. This is required in BPMN structure.")
-        data["result"] = {}
+        # Detect top-level BPMN keys and wrap into 'result' if present.
+        # Some parsers produce top-level keys like `flowElements`, `messageFlows`,
+        # `pool` (singular) or `pools`, and `lanes` instead of nesting under `result`.
+        top_candidates = ["flowElements", "messageFlows", "pools", "pool", "lanes"]
+        has_top_keys = any(k in data for k in top_candidates)
 
-    # Pastikan struktur utama di dalam 'result' ada
-    for key in ["flowElements", "messageFlows", "pools", "lanes"]:
-        if key not in data["result"]:
-            print(f"⚠️ Warning: The result key '{key}' is missing.")
-            data["result"][key] = []
+        if has_top_keys:
+            print("ℹ️ Detected BPMN keys at top-level; wrapping them into 'result'.")
+            result_obj = {}
+            # canonical keys we expect under 'result'
+            canonical = ["flowElements", "messageFlows", "pools", "lanes"]
+
+            for key in canonical:
+                # handle possible singular 'pool' key mapping to 'pools'
+                if key == "pools":
+                    if "pools" in data:
+                        result_obj[key] = data.pop("pools")
+                    elif "pool" in data:
+                        result_obj[key] = data.pop("pool")
+                    else:
+                        print(f"⚠️ Warning: The result key '{key}' is missing.")
+                        result_obj[key] = []
+                else:
+                    if key in data:
+                        result_obj[key] = data.pop(key)
+                    else:
+                        print(f"⚠️ Warning: The result key '{key}' is missing.")
+                        result_obj[key] = []
+
+            data["result"] = result_obj
+        else:
+            print("❌ The 'result' property is missing. This is required in BPMN structure.")
+            data["result"] = {"flowElements": [], "messageFlows": [], "pools": [], "lanes": []}
 
     # 🔍 Ambil flowElements
     flow_elements = data["result"].get("flowElements", [])
