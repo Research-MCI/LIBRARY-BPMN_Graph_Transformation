@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bpmn-graph-transformation"
-version = "0.1.6"
+version = "0.1.8"
 description = "Library for converting BPMN JSON to Cypher queries for Neo4j"
 readme = "READMEpypi.md"
 authors = [
@@ -48,7 +48,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["bpmn_neo4j*"]
+include = ["bpmn_neo4j*", "bpmn_mp*", "*"]
 
 [tool.setuptools.package-data]
 "bpmn_neo4j.validators" = ["*.json"]

@@ -1,1 +1,3 @@
 recursive-include src/bpmn_neo4j/validators *.json
+recursive-include src/bpmn_neo4j *.json
+recursive-include src/bpmn_mp *.json

@@ -3,8 +3,19 @@ import jsonschema
 from jsonschema import validate
 import uuid
 import copy
+import importlib.resources as pkg_resources
+from bpmn_neo4j import validators
 
-def validate_schema(data, schema_path="validators/bpmn_schema.json", auto_fix=False):
+
+def validate_schema(data, schema_path=None, auto_fix=False):
+
+    # --- load schema from package ---
+    if schema_path is None:
+        with pkg_resources.files(validators).joinpath("bpmn_schema.json").open("r", encoding="utf-8") as f:
+            schema = json.load(f)
+    else:
+        with open(schema_path, "r", encoding="utf-8") as f:
+            schema = json.load(f)
     """
     Validasi struktur BPMN JSON dengan format baru (result.flowElements).
     """
